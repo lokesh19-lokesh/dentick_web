@@ -182,6 +182,121 @@
   letter-spacing: 0.05em;
 }
 
+/* --- FAQ Section --- */
+.faqSection {
+  padding: 5rem 5%;
+  background-color: var(--secondary);
+}
+
+.faqContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .faqContainer {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.faqLeft h2 {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  color: var(--foreground);
+}
+
+.faqLeft > p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.faqCard {
+  background-color: #faf5ff;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  max-width: 400px;
+}
+
+.faqCard h4 {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.faqCard p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.faqButton {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-size: 0.95rem;
+}
+
+.faqButton:hover {
+  opacity: 0.9;
+}
+
+.faqRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.faqItem {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.faqItem summary {
+  padding: 1.5rem 0;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqContent {
+  padding-bottom: 1.5rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.chevron {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--text-muted);
+  border-bottom: 2px solid var(--text-muted);
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.faqItem[open] .chevron {
+  transform: rotate(-135deg);
+}
+
 /* --- Features Section --- */
 .featuresSection {
   padding: 5rem 5%;

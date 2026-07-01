@@ -200,6 +200,49 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className={styles.faqSection}>
+          <div className={styles.faqContainer}>
+            <div className={styles.faqLeft}>
+              <h2>Frequently asked questions</h2>
+              <p>Everything you need to know before going live.</p>
+              
+              <div className={styles.faqCard}>
+                <h4>Still have questions?</h4>
+                <p>Talk to our dental growth experts.</p>
+                <button className={styles.faqButton}>Book a demo</button>
+              </div>
+            </div>
+            
+            <div className={styles.faqRight}>
+              <details className={styles.faqItem}>
+                <summary>How long does setup take?<span className={styles.chevron}></span></summary>
+                <div className={styles.faqContent}>Setup typically takes less than 48 hours. Our team will handle all the technical details for you.</div>
+              </details>
+              <details className={styles.faqItem}>
+                <summary>Will this work with my existing software?<span className={styles.chevron}></span></summary>
+                <div className={styles.faqContent}>Yes, DentTick AI integrates seamlessly with most major dental practice management software (PMS) through secure APIs.</div>
+              </details>
+              <details className={styles.faqItem}>
+                <summary>Is patient data secure?<span className={styles.chevron}></span></summary>
+                <div className={styles.faqContent}>Absolutely. We are fully HIPAA compliant and use enterprise-grade encryption to ensure patient data is never compromised.</div>
+              </details>
+              <details className={styles.faqItem}>
+                <summary>Do I need to manage WhatsApp myself?<span className={styles.chevron}></span></summary>
+                <div className={styles.faqContent}>No, our AI acts as a smart receptionist, handling inquiries, booking appointments, and sending reminders automatically via WhatsApp.</div>
+              </details>
+              <details className={styles.faqItem}>
+                <summary>Can I cancel anytime?<span className={styles.chevron}></span></summary>
+                <div className={styles.faqContent}>Yes, we operate on a month-to-month basis. There are no lock-in contracts, so you can cancel anytime.</div>
+              </details>
+              <details className={styles.faqItem}>
+                <summary>Do you offer a free trial?<span className={styles.chevron}></span></summary>
+                <div className={styles.faqContent}>We offer a risk-free 14-day trial so you can experience the automated growth firsthand before committing.</div>
+              </details>
+            </div>
+          </div>
+        </section>
+
         {/* Consult Form Section */}
         <section className={styles.consultSection}>
           <div className={styles.consultBox}>
