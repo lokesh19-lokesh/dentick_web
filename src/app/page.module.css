@@ -227,29 +227,30 @@
 }
 
 .featureCard {
-  background-color: var(--background);
+  background-color: var(--card-bg);
   padding: 2rem;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .featureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
 }
 
 .featureIcon {
   width: 48px;
   height: 48px;
-  background-color: rgba(139, 61, 255, 0.1);
+  background-color: #f5f3ff;
   color: var(--primary);
-  border-radius: var(--radius-md);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .featureIconSolid {
@@ -257,25 +258,26 @@
   height: 48px;
   background-color: var(--primary);
   color: var(--secondary);
-  border-radius: var(--radius-md);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .featureCardHighlighted {
-  background-color: var(--background);
+  background-color: var(--card-bg);
   padding: 2rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--primary);
+  box-shadow: 0 4px 6px -1px rgba(139, 61, 255, 0.05);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .featureCardHighlighted:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(139, 61, 255, 0.1);
 }
 
 .featureCard h3 {

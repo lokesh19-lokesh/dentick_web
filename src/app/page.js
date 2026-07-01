@@ -118,8 +118,8 @@ export default function Home() {
               <h3>Revenue Analytics</h3>
               <p>Track collections, doctor productivity, treatment-mix and ROI in real time.</p>
             </div>
-            <div className={`${styles.featureCard} ${styles.featureCardHighlighted}`}>
-              <div className={styles.featureIconSolid}>🚀</div>
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>🚀</div>
               <h3>New Clinic Launch Pack</h3>
               <p>Brand kit, website, GMB setup and 90-day growth playbook for new clinics.</p>
             </div>
