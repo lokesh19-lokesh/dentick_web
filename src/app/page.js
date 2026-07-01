@@ -1,7 +1,18 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Button from '../components/Button';
+import Link from 'next/link';
+import { featuresData } from '../data/features';
 import styles from './page.module.css';
+
+// Small icons for the titles (solid white, simple paths)
+const SmallIcon = ({ children }) => (
+  <div className={styles.featureIcon}>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      {children}
+    </svg>
+  </div>
+);
 
 export default function Home() {
   return (
@@ -83,46 +94,15 @@ export default function Home() {
           </div>
           
           <div className={styles.featuresGrid}>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>🤖</div>
-              <h3>AI Receptionist</h3>
-              <p>24/7 voice & chat agent that books appointments, answers FAQs and never misses a lead.</p>
-            </div>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>👥</div>
-              <h3>Dental CRM</h3>
-              <p>Unified patient records, treatment plans, recall reminders and lifetime value tracking.</p>
-            </div>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>💬</div>
-              <h3>WhatsApp CRM</h3>
-              <p>Automated WhatsApp campaigns, broadcasts and 2-way chat — fully compliant.</p>
-            </div>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>📅</div>
-              <h3>Appointment Management</h3>
-              <p>Smart scheduling, auto-reminders, no-show recovery and chair utilization analytics.</p>
-            </div>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>📢</div>
-              <h3>Marketing Automation</h3>
-              <p>Run Meta & Google ads, landing pages and drip campaigns on autopilot.</p>
-            </div>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>⭐</div>
-              <h3>Google Review Automation</h3>
-              <p>Turn every happy patient into a 5-star Google review automatically.</p>
-            </div>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>📊</div>
-              <h3>Revenue Analytics</h3>
-              <p>Track collections, doctor productivity, treatment-mix and ROI in real time.</p>
-            </div>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>🚀</div>
-              <h3>New Clinic Launch Pack</h3>
-              <p>Brand kit, website, GMB setup and 90-day growth playbook for new clinics.</p>
-            </div>
+            {featuresData.map((feature, index) => (
+              <Link href={`/features/${feature.slug}`} key={index} style={{ textDecoration: 'none' }}>
+                <div className={styles.featureCard}>
+                  <SmallIcon>{feature.icon}</SmallIcon>
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
 
