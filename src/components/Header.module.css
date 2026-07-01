@@ -1,0 +1,73 @@
+.header {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+.nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: var(--secondary);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.bookDemo {
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .bookDemo {
+    display: block;
+  }
+}
+
+.mobileMenuBtn {
+  display: block;
+  color: var(--secondary);
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .mobileMenuBtn {
+    display: none;
+  }
+}
