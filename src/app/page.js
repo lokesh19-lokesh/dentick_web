@@ -243,6 +243,18 @@ export default function Home() {
           </div>
         </section>
 
+        {/* CTA Section */}
+        <section className={styles.ctaSection}>
+          <div className={styles.ctaContainer}>
+            <h2>Ready to modernize your clinic?</h2>
+            <p>Join the fastest-growing dental network in India. 14-day free trial. No credit card required.</p>
+            <div className={styles.ctaButtonGroup}>
+              <button className={styles.ctaBtnPrimary}>Get Your Free Growth Audit</button>
+              <button className={styles.ctaBtnSecondary}>View Pricing</button>
+            </div>
+          </div>
+        </section>
+
         {/* Consult Form Section */}
         <section className={styles.consultSection}>
           <div className={styles.consultBox}>

@@ -297,6 +297,75 @@
   transform: rotate(-135deg);
 }
 
+/* --- CTA Section --- */
+.ctaSection {
+  padding: 5rem 5%;
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+}
+
+.ctaContainer {
+  background: linear-gradient(135deg, #7c3aed 0%, #c084fc 100%);
+  border-radius: 2rem;
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.ctaContainer h2 {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ctaContainer p {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  opacity: 0.95;
+}
+
+.ctaButtonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaBtnPrimary {
+  background-color: #111827;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.ctaBtnPrimary:hover {
+  opacity: 0.9;
+}
+
+.ctaBtnSecondary {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ctaBtnSecondary:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
 /* --- Features Section --- */
 .featuresSection {
   padding: 5rem 5%;
