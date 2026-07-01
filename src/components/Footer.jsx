@@ -64,6 +64,11 @@ export default function Footer() {
         </div>
       </div>
 
+      <div className={styles.footerBottom}>
+        <p>© 2026 DentTick AI Technologies Pvt. Ltd.</p>
+        <p>hello@dentick.ai · +91 80000 00000</p>
+      </div>
+
       {showFloating && (
         <div className={styles.floatingDemo}>
           <Button href="/contact" variant="primary">
