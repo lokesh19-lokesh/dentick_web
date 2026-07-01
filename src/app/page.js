@@ -151,12 +151,53 @@ export default function Home() {
             </div>
           </div>
           
-          <div style={{ marginTop: '5rem', fontSize: '2rem', color: 'var(--primary)' }}>
-            ❝
+        </section>
+
+        {/* Testimonials Section */}
+        <section className={styles.testimonialsSection}>
+          <div>❝</div>
+          <h2>Loved by India's top dentists</h2>
+          
+          <div className={styles.testimonialsGrid}>
+            <div className={styles.testimonialCard}>
+              <p className={styles.quote}>
+                "DentTick replaced 3 tools and a part-time receptionist. Our collections grew 41% in 4 months."
+              </p>
+              <div className={styles.author}>
+                <img src="https://i.pravatar.cc/150?u=aarav" alt="Dr. Aarav Sharma" className={styles.authorImage} />
+                <div className={styles.authorInfo}>
+                  <h4>Dr. Aarav Sharma</h4>
+                  <p>Smile Studio, Mumbai</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className={styles.testimonialCard}>
+              <p className={styles.quote}>
+                "The WhatsApp + AI receptionist combo is magical. Patients book themselves while I focus on dentistry."
+              </p>
+              <div className={styles.author}>
+                <img src="https://i.pravatar.cc/150?u=priya" alt="Dr. Priya Nair" className={styles.authorImage} />
+                <div className={styles.authorInfo}>
+                  <h4>Dr. Priya Nair</h4>
+                  <p>32 Pearls, Bengaluru</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className={styles.testimonialCard}>
+              <p className={styles.quote}>
+                "We went from 38 to 212 Google reviews in 90 days. The growth is unreal."
+              </p>
+              <div className={styles.author}>
+                <img src="https://i.pravatar.cc/150?u=rohan" alt="Dr. Rohan Gupta" className={styles.authorImage} />
+                <div className={styles.authorInfo}>
+                  <h4>Dr. Rohan Gupta</h4>
+                  <p>Dr. Gupta Dental, Delhi</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.5rem', marginTop: '1rem' }}>
-            Loved by India's top dentists
-          </h2>
         </section>
 
         {/* Consult Form Section */}
