@@ -1,0 +1,201 @@
+.mobilePhone {
+  position: absolute;
+  width: 220px;
+  height: 460px;
+  border-radius: 35px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  border: 8px solid #1a1a1a;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.mobilePhone:hover {
+  transform: translateY(-10px);
+}
+
+.phone1 { top: 0; left: 0; z-index: 2; }
+.phone2 { top: 100px; left: 230px; z-index: 1; }
+.phone3 { top: 300px; left: -20px; z-index: 3; }
+.phone4 { top: 380px; left: 200px; z-index: 2; }
+
+@media (max-width: 991px) {
+  .mobilePhone {
+    position: static;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+/* UI Elements */
+.uiHeader {
+  background: white;
+  padding: 1.5rem 1rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #111827;
+}
+
+.uiHeaderDark {
+  background: var(--primary);
+  padding: 1.5rem 1rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  color: white;
+}
+
+.uiBody {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow: hidden;
+}
+
+/* Chat UI */
+.chatBubbleRecv {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  border-radius: 12px 12px 12px 0;
+  font-size: 0.75rem;
+  color: #374151;
+  align-self: flex-start;
+  max-width: 85%;
+}
+
+.chatBubbleSent {
+  background: #25d366;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 12px 12px 0 12px;
+  font-size: 0.75rem;
+  align-self: flex-end;
+  max-width: 85%;
+}
+
+.uiFooter {
+  background: white;
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.uiInput {
+  background: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+/* Profile UI */
+.uiProfile {
+  background: white;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.uiAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  margin-bottom: 0.5rem;
+}
+
+.uiName {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+.uiDetail {
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.uiCard {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.uiCardTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.uiBar {
+  height: 6px;
+  background: #f3f4f6;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.uiBarFill {
+  height: 100%;
+  background: var(--primary);
+}
+
+.uiText {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* AI UI */
+.aiBubble {
+  background: #f3e8ff;
+  color: #581c87;
+  padding: 0.75rem;
+  border-radius: 12px 12px 12px 0;
+  font-size: 0.75rem;
+  align-self: flex-start;
+  max-width: 85%;
+  border: 1px solid #e9d5ff;
+}
+
+.userBubble {
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem;
+  border-radius: 12px 12px 0 12px;
+  font-size: 0.75rem;
+  align-self: flex-end;
+  max-width: 85%;
+}
+
+/* Cal UI */
+.calSlot {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.calTime {
+  font-size: 0.7rem;
+  color: #6b7280;
+  width: 30px;
+  padding-top: 0.25rem;
+}
+
+.calAppt {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #111827;
+}

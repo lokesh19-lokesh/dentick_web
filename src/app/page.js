@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { featuresData } from '../data/features';
 import styles from './page.module.css';
 import Counter from '../components/Counter';
+import MobileMockups from '../components/MobileMockups';
 
 // Small icons for the titles (solid white, simple paths)
 const SmallIcon = ({ children }) => (
@@ -86,6 +87,24 @@ export default function Home() {
             <div className={styles.statCard}>
               <h3><Counter end={48} suffix=" hrs" /></h3>
               <p>Avg. Go-Live Time</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Mobile Showcase Section */}
+        <section className={styles.mobileShowcase}>
+          <div className={styles.mobileShowcaseContainer}>
+            <div className={styles.mobilePhonesGrid}>
+              <MobileMockups />
+            </div>
+            
+            <div className={styles.mobileShowcaseText}>
+              <h2>Run Your Clinic from Anywhere</h2>
+              <p className={styles.showcaseSubtitle}>Your entire growth engine, now in your pocket.</p>
+              <p>
+                Access patient records, manage appointments, and monitor revenue in real-time with the DentTick mobile app. From reviewing AI-booked appointments to responding instantly via our unified WhatsApp inbox, DentTick gives doctors and staff the power to deliver exceptional care without being tied to a desk.
+              </p>
+              <Link href="/contact" className={styles.showcaseBtn}>See it in action</Link>
             </div>
           </div>
         </section>
