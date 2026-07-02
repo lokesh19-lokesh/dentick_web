@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
+import Link from 'next/link';
 import { featuresData } from '../../../data/features';
 import styles from './page.module.css';
 
@@ -69,7 +70,7 @@ export default async function FeaturePage({ params }) {
 
         {/* CTA Section */}
         <section className={styles.simpleCtaSection}>
-          <button className={styles.simpleCtaButton}>See it live — book a demo</button>
+          <Link href="/contact" className={styles.simpleCtaButton}>See it live — book a demo</Link>
         </section>
       </main>
 

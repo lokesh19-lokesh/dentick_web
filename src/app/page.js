@@ -190,7 +190,7 @@ export default function Home() {
               <div className={styles.faqCard}>
                 <h4>Still have questions?</h4>
                 <p>Talk to our dental growth experts.</p>
-                <button className={styles.faqButton}>Book a demo</button>
+                <Link href="/contact" className={styles.faqButton}>Book a demo</Link>
               </div>
             </div>
             
@@ -229,8 +229,8 @@ export default function Home() {
             <h2>Ready to modernize your clinic?</h2>
             <p>Join the fastest-growing dental network in India. 14-day free trial. No credit card required.</p>
             <div className={styles.ctaButtonGroup}>
-              <button className={styles.ctaBtnPrimary}>Get Your Free Growth Audit</button>
-              <button className={styles.ctaBtnSecondary}>View Pricing</button>
+              <Link href="/contact" className={styles.ctaBtnPrimary}>Get Your Free Growth Audit</Link>
+              <Link href="/pricing" className={styles.ctaBtnSecondary}>View Pricing</Link>
             </div>
           </div>
         </section>

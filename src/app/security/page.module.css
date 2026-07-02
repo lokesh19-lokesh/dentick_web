@@ -1,0 +1,142 @@
+.pageWrapper {
+  background-color: var(--secondary);
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 5% 4rem;
+}
+
+.heroIcon {
+  width: 80px;
+  height: 80px;
+  background-color: #f3e8ff;
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto 6rem;
+  padding: 0 5%;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .pillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pillarCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 3rem;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pillarIcon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillarCard h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--foreground);
+}
+
+.pillarCard p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.complianceBox {
+  background: linear-gradient(135deg, #fafafa 0%, #f3e8ff 100%);
+  border: 1px solid var(--primary);
+  border-radius: 1.5rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.complianceBox h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.complianceBox p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  color: var(--foreground);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 5% 2rem;
+  }
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  .complianceBox {
+    padding: 3rem 1.5rem;
+  }
+}

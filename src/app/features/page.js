@@ -75,7 +75,7 @@ export default function Features() {
 
         {/* CTA Section */}
         <section className={styles.simpleCtaSection}>
-          <button className={styles.simpleCtaButton}>See it live — book a demo</button>
+          <Link href="/contact" className={styles.simpleCtaButton}>See it live — book a demo</Link>
         </section>
       </main>
 
