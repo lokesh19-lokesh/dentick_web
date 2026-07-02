@@ -4,6 +4,7 @@ import Button from '../components/Button';
 import Link from 'next/link';
 import { featuresData } from '../data/features';
 import styles from './page.module.css';
+import Counter from '../components/Counter';
 
 // Small icons for the titles (solid white, simple paths)
 const SmallIcon = ({ children }) => (
@@ -71,19 +72,19 @@ export default function Home() {
           
           <div className={styles.statsGrid}>
             <div className={styles.statCard}>
-              <h3>10k+</h3>
+              <h3><Counter end={10} suffix="k+" /></h3>
               <p>Patients Managed</p>
             </div>
             <div className={styles.statCard}>
-              <h3>3.2x</h3>
+              <h3><Counter end={3.2} decimals={1} suffix="x" /></h3>
               <p>Avg. Patient Growth</p>
             </div>
             <div className={styles.statCard}>
-              <h3>500+</h3>
+              <h3><Counter end={500} suffix="+" /></h3>
               <p>Active Clinics</p>
             </div>
             <div className={styles.statCard}>
-              <h3>48 hrs</h3>
+              <h3><Counter end={48} suffix=" hrs" /></h3>
               <p>Avg. Go-Live Time</p>
             </div>
           </div>
