@@ -135,26 +135,57 @@
   margin-bottom: 3rem;
 }
 
-.logos {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 5rem;
+.slider {
+  margin: 0 auto 5rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.logoCircle {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background-color: var(--background);
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to right, var(--secondary) 0%, transparent 100%);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to left, var(--secondary) 0%, transparent 100%);
+}
+
+.slideTrack {
   display: flex;
+  width: calc(250px * 12);
+  animation: scrollRightToLeft 30s linear infinite;
   align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  color: var(--text-muted);
-  font-size: 1rem;
-  border: 1px solid var(--border-color);
+}
+
+@keyframes scrollRightToLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 6)); }
+}
+
+.slide {
+  height: 80px;
+  width: 250px;
+  object-fit: contain;
+  padding: 0 2rem;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.slide:hover {
+  opacity: 1;
 }
 
 .statsGrid {

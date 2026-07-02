@@ -56,15 +56,17 @@ export default function Home() {
         {/* Stats Section */}
         <section className={styles.statsSection}>
           <p>PROUDLY SERVING 500+ DENTAL CLINICS ACROSS INDIA</p>
-          <div className={styles.logos}>
-            <div className={styles.logoCircle}>SS</div>
-            <div className={styles.logoCircle}>32P</div>
-            <div className={styles.logoCircle}>MD</div>
-            <div className={styles.logoCircle}>AW</div>
-            <div className={styles.logoCircle}>CC</div>
-            <div className={styles.logoCircle}>SD</div>
-            <div className={styles.logoCircle}>TS</div>
-            <div className={styles.logoCircle}>FD</div>
+          <div className={styles.slider}>
+            <div className={styles.slideTrack}>
+              {[1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6].map((num, i) => (
+                <img 
+                  key={i} 
+                  src={`/images/clinics/${num}.png`} 
+                  alt={`Clinic ${num}`} 
+                  className={styles.slide} 
+                />
+              ))}
+            </div>
           </div>
           
           <div className={styles.statsGrid}>
