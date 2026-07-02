@@ -293,4 +293,16 @@
   .title {
     font-size: 3rem;
   }
+  
+  .hero {
+    padding: 3rem 5% 2rem;
+  }
+  
+  .customPlanSection {
+    margin: 3rem auto;
+  }
+  
+  .customPlanCard {
+    padding: 3rem 1.5rem;
+  }
 }

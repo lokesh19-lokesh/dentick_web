@@ -203,3 +203,32 @@
   transform: translateY(-2px);
   opacity: 0.95;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 5% 2rem;
+  }
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  .featuresContainer {
+    padding: 3rem 5% 4rem;
+    gap: 4rem;
+  }
+  .featureRow {
+    gap: 2rem;
+  }
+  .featureContent h2 {
+    font-size: 2rem;
+  }
+  .featureGraphic {
+    padding: 2rem;
+  }
+  .featureGraphic svg {
+    width: 100px;
+    height: 100px;
+  }
+  .simpleCtaSection {
+    padding: 0 5% 4rem;
+  }
+}

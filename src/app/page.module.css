@@ -681,3 +681,36 @@
   font-size: 0.85rem;
   color: var(--text-muted);
 }
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+  .faqLeft h2 {
+    font-size: 2.5rem;
+  }
+  .ctaContainer h2 {
+    font-size: 2.25rem;
+  }
+  .statCard h3 {
+    font-size: 2rem;
+  }
+  .hero {
+    padding: 3rem 5%;
+  }
+  .statsSection, .faqSection, .ctaSection, .featuresSection, .howItWorks, .testimonialsSection, .consultSection {
+    padding: 3rem 5%;
+  }
+  .ctaContainer {
+    padding: 3rem 1.5rem;
+  }
+  .sectionHeader h2 {
+    font-size: 2.5rem;
+  }
+  .testimonialsSection h2 {
+    font-size: 2rem;
+  }
+  .testimonialsSection > div:first-child {
+    font-size: 2rem;
+  }
+}

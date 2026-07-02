@@ -176,4 +176,8 @@
   .formCard {
     padding: 2rem;
   }
+  
+  .hero {
+    padding: 3rem 5% 2rem;
+  }
 }
