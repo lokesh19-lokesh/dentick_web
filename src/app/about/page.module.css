@@ -1,0 +1,194 @@
+.pageWrapper {
+  background: linear-gradient(to bottom, #f3e8ff 0%, #fafafa 30%);
+  min-height: 100vh;
+  padding-bottom: 5rem;
+}
+
+.hero {
+  text-align: left;
+  max-width: 900px;
+  padding: 6rem 5% 4rem;
+}
+
+.overline {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 4.5rem;
+  color: var(--foreground);
+  margin-bottom: 2rem;
+  line-height: 1.05;
+}
+
+.titleHighlight {
+  color: var(--primary);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.storySection {
+  max-width: 1200px;
+  margin: 2rem auto 6rem;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.storyImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.storyImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.storyContent {
+  /* Right side */
+}
+
+.storyTitle {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+}
+
+.storyText {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.statCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.statValue {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.beliefsSection {
+  max-width: 1200px;
+  margin: 6rem auto;
+  padding: 0 5%;
+  text-align: center;
+}
+
+.beliefsTitle {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  color: var(--foreground);
+}
+
+.beliefsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.beliefCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.beliefCardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.beliefCardText {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.btnSolid {
+  display: inline-block;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.btnSolid:hover {
+  background-color: var(--primary-hover);
+}
+
+@media (max-width: 1024px) {
+  .beliefsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  .storySection {
+    grid-template-columns: 1fr;
+  }
+  .storyImageWrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .beliefsGrid {
+    grid-template-columns: 1fr;
+  }
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
