@@ -36,6 +36,16 @@
   overflow: hidden;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+  pointer-events: none;
+}
+
 .videoPlayBtn {
   position: absolute;
   top: 50%;
@@ -51,6 +61,7 @@
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s;
+  z-index: 10;
 }
 
 .videoPlayBtn:hover {
@@ -64,6 +75,10 @@
   margin-left: 4px; /* visual center for play icon */
 }
 
+.heroVideoText {
+  z-index: 10;
+}
+
 .heroVideoText h2 {
   font-family: var(--font-serif);
   font-size: 2rem;
@@ -74,6 +89,7 @@
 .heroVideoText p {
   font-size: 0.9rem;
   opacity: 0.9;
+  color: white;
 }
 
 .heroContent h1 {

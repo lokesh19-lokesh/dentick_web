@@ -23,7 +23,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className={styles.hero}>
           <div className={styles.heroContainer}>
-            <div className={styles.heroVideoBox}>
+            <div className={styles.heroVideoBox} style={{ backgroundImage: 'url(/images/dashboard-ui.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className={styles.videoPlayBtn}>
                 <svg className={styles.playIcon} viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
@@ -33,6 +33,7 @@ export default function Home() {
                 <h2>Empower your clinic with patient-first AI</h2>
                 <p>Watch how DentTick automates your growth workflow.</p>
               </div>
+              <div className={styles.overlay}></div>
             </div>
             
             <div className={styles.heroContent}>
