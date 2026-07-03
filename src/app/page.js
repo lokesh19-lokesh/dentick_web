@@ -7,6 +7,7 @@ import styles from './page.module.css';
 import Counter from '../components/Counter';
 import MobileMockups from '../components/MobileMockups';
 import HeroVideo from '../components/HeroVideo';
+import AccessibilitySection from '../components/AccessibilitySection';
 
 // Small icons for the titles (solid white, simple paths)
 const SmallIcon = ({ children }) => (
@@ -98,6 +99,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Accessibility / Omnichannel Section */}
+        <AccessibilitySection />
 
         {/* Features Section */}
         <section className={styles.featuresSection}>

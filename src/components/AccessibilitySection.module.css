@@ -1,0 +1,128 @@
+.sectionContainer {
+  padding: 5rem 5%;
+  background: linear-gradient(to right, #eaf4f0, #e6f0f9);
+  display: flex;
+  justify-content: center;
+}
+
+.contentWrapper {
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  height: 400px;
+}
+
+.mainCard {
+  background: white;
+  border-radius: 16px;
+  flex: 2.2;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.mainCardImage {
+  flex: 1;
+  background-image: url('/images/receptionist_smiling.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.mainCardText {
+  flex: 1.2;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainCardText h2 {
+  color: #d32f2f;
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.mainCardText p {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.mainCardText strong {
+  color: #111827;
+}
+
+.cardLink {
+  color: #111827;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.cardLink:hover {
+  text-decoration: underline;
+  color: var(--primary);
+}
+
+.sliceContainer {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1.5;
+}
+
+.verticalSlice {
+  flex: 1;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.verticalSlice:hover {
+  transform: translateY(-5px);
+}
+
+.slice1 { background-image: url('/images/family_clinic.png'); }
+.slice2 { background-image: url('/images/patient_phone.png'); }
+.slice3 { background-image: url('/images/dentist_patient.png'); }
+
+@media (max-width: 991px) {
+  .contentWrapper {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .mainCard {
+    flex-direction: column;
+  }
+  
+  .mainCardImage {
+    height: 250px;
+  }
+  
+  .mainCardText {
+    padding: 2rem;
+  }
+  
+  .sliceContainer {
+    height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sliceContainer {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .verticalSlice {
+    height: 200px;
+  }
+}
