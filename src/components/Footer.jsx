@@ -25,7 +25,9 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.brand}>
-          <Link href="/" className={styles.logo}>DentTick AI</Link>
+          <Link href="/" className={styles.logo}>
+            <img src="/images/logo.png" alt="DentTick AI Logo" className={styles.logoImage} />
+          </Link>
           <p className={styles.description}>
             India's first Dental Growth Operating System — built to help dentists scale revenue without scaling stress.
           </p>

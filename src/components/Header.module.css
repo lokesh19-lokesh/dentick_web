@@ -11,11 +11,15 @@
 }
 
 .logo {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: var(--secondary);
+}
+
+.logoImage {
+  height: 80px;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
 
 .nav {

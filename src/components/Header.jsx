@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link href="/" className={styles.logo}>
-        DentTick AI
+        <img src="/images/logo.png" alt="DentTick AI Logo" className={styles.logoImage} />
       </Link>
       
       <nav className={styles.nav}>
