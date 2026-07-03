@@ -41,6 +41,18 @@ export default async function FeaturePage({ params }) {
             <div className={styles.heroOverline}>Feature Deep Dive</div>
             <h1 className={styles.heroTitle}>{feature.title}</h1>
             <p className={styles.heroSubtitle}>{feature.description}</p>
+            {feature.slug === 'whatsapp-crm' && (
+              <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+                <a 
+                  href="https://yestickai.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={styles.simpleCtaButton}
+                >
+                  Visit our WhatsApp CRM
+                </a>
+              </div>
+            )}
           </div>
           <div className={styles.heroGraphic}>
             {feature.graphic}
