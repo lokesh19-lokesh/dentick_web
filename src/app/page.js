@@ -6,6 +6,7 @@ import { featuresData } from '../data/features';
 import styles from './page.module.css';
 import Counter from '../components/Counter';
 import MobileMockups from '../components/MobileMockups';
+import HeroVideo from '../components/HeroVideo';
 
 // Small icons for the titles (solid white, simple paths)
 const SmallIcon = ({ children }) => (
@@ -25,18 +26,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className={styles.hero}>
           <div className={styles.heroContainer}>
-            <div className={styles.heroVideoBox} style={{ backgroundImage: 'url(/images/dashboard-ui.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-              <div className={styles.videoPlayBtn}>
-                <svg className={styles.playIcon} viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <div className={styles.heroVideoText}>
-                <h2>Empower your clinic with patient-first AI</h2>
-                <p>Watch how DentTick automates your growth workflow.</p>
-              </div>
-              <div className={styles.overlay}></div>
-            </div>
+            <HeroVideo />
             
             <div className={styles.heroContent}>
               <h1>Scale Your Practice <span>With Precision.</span></h1>
