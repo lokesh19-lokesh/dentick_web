@@ -190,15 +190,15 @@
 
 .statsGrid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 @media (min-width: 640px) {
   .statsGrid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
@@ -210,23 +210,41 @@
 
 .statCard {
   background-color: var(--background);
-  padding: 2.5rem 1.5rem;
+  padding: 1.5rem 1rem;
   border-radius: var(--radius-lg);
+}
+
+@media (min-width: 640px) {
+  .statCard {
+    padding: 2.5rem 1.5rem;
+  }
 }
 
 .statCard h3 {
   font-family: var(--font-serif);
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: var(--primary);
   margin-bottom: 0.5rem;
 }
 
+@media (min-width: 640px) {
+  .statCard h3 {
+    font-size: 2.5rem;
+  }
+}
+
 .statCard p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+@media (min-width: 640px) {
+  .statCard p {
+    font-size: 0.8rem;
+  }
 }
 
 /* --- Mobile Showcase Section --- */
