@@ -591,12 +591,13 @@
   border-radius: var(--radius-lg);
   border: 1px solid #f3f4f6;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .featureCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
 }
 
 .featureIcon {
@@ -610,6 +611,13 @@
   justify-content: center;
   margin-bottom: 1.5rem;
   font-size: 1.4rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.featureCard:hover .featureIcon {
+  background-color: var(--primary);
+  color: white;
+  transform: scale(1.15) rotate(-5deg);
 }
 
 .featureIconSolid {
@@ -623,6 +631,7 @@
   justify-content: center;
   margin-bottom: 1.5rem;
   font-size: 1.4rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .featureCardHighlighted {
@@ -631,12 +640,16 @@
   border-radius: var(--radius-lg);
   border: 1px solid var(--primary);
   box-shadow: 0 4px 6px -1px rgba(139, 61, 255, 0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .featureCardHighlighted:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(139, 61, 255, 0.1);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px -10px rgba(139, 61, 255, 0.2);
+}
+
+.featureCardHighlighted:hover .featureIconSolid {
+  transform: scale(1.15) rotate(5deg);
 }
 
 .featureCard h3 {
