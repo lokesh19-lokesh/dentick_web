@@ -70,7 +70,7 @@ export default function CaseStudies() {
                     src={study.image} 
                     alt={study.title}
                     fill
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain', padding: '1.5rem' }}
                   />
                 </div>
                 <div className={styles.cardContent}>
