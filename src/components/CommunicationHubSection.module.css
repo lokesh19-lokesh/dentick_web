@@ -1,26 +1,18 @@
 .section {
   padding: 6rem 5%;
-  background-color: var(--primary);
   color: white;
   position: relative;
   overflow: hidden;
-  border-radius: 48px;
-  margin: 4rem 2rem;
-  box-shadow: 0 25px 50px -12px rgba(80, 20, 180, 0.4);
 }
 
 @media (max-width: 991px) {
   .section {
-    margin: 3rem 1.5rem;
-    border-radius: 36px;
     padding: 5rem 5%;
   }
 }
 
 @media (max-width: 768px) {
   .section {
-    margin: 2rem 1rem;
-    border-radius: 28px;
     padding: 4rem 5%;
   }
 }

@@ -1,0 +1,24 @@
+.outerWrapper {
+  position: relative;
+  width: 100%;
+  padding: 4rem 0; /* Space to see the top/bottom curves */
+  /* Remove flex centering so it behaves like a normal block */
+}
+
+.animatedBackground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary);
+  will-change: width, border-radius;
+  transition: width 0.1s ease-out, border-radius 0.1s ease-out;
+  z-index: -1;
+}
+
+.contentLayer {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
