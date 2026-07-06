@@ -32,6 +32,12 @@
   filter: brightness(0) invert(1);
 }
 
+@media (max-width: 768px) {
+  .logoImage {
+    height: 40px;
+  }
+}
+
 .nav {
   display: none;
 }

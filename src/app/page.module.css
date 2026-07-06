@@ -380,29 +380,29 @@
 
 @media (max-width: 991px) {
   .mobilePhonesGrid {
-    transform: scale(0.85);
-    margin-bottom: -127px;
-  }
-}
-
-@media (max-width: 768px) {
-  .mobilePhonesGrid {
-    transform: scale(0.8);
-    margin-bottom: -170px;
-  }
-}
-
-@media (max-width: 480px) {
-  .mobilePhonesGrid {
     transform: scale(0.75);
     margin-bottom: -212px;
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 768px) {
   .mobilePhonesGrid {
     transform: scale(0.65);
     margin-bottom: -297px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobilePhonesGrid {
+    transform: scale(0.55);
+    margin-bottom: -382px;
+  }
+}
+
+@media (max-width: 380px) {
+  .mobilePhonesGrid {
+    transform: scale(0.45);
+    margin-bottom: -467px;
   }
 }
 
