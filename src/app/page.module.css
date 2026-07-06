@@ -370,29 +370,25 @@
 
 @media (max-width: 991px) {
   .mobilePhonesGrid {
-    transform: scale(0.75);
-    margin-bottom: -212px;
+    zoom: 0.75;
   }
 }
 
 @media (max-width: 768px) {
   .mobilePhonesGrid {
-    transform: scale(0.65);
-    margin-bottom: -297px;
+    zoom: 0.65;
   }
 }
 
 @media (max-width: 480px) {
   .mobilePhonesGrid {
-    transform: scale(0.55);
-    margin-bottom: -382px;
+    zoom: 0.55;
   }
 }
 
 @media (max-width: 380px) {
   .mobilePhonesGrid {
-    transform: scale(0.45);
-    margin-bottom: -467px;
+    zoom: 0.45;
   }
 }
 

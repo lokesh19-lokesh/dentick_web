@@ -27,19 +27,8 @@ export default function AnimatedMergedSection({ children }) {
         newScale = 0.75 + (0.25 * progress);
         newRadius = 80 - (80 * progress);
       }
-      // Leaving towards top
-      else if (rect.bottom >= 0 && rect.bottom < windowHeight) {
-         if (rect.bottom > OFFSET) {
-            const progress = (rect.bottom - OFFSET) / (windowHeight - OFFSET);
-            newScale = 0.75 + (0.25 * progress);
-            newRadius = 80 - (80 * progress);
-         } else {
-            newScale = 0.75;
-            newRadius = 80;
-         }
-      }
-      // Fully inside the middle of the scrolling area
-      else if (rect.top <= OFFSET && rect.bottom >= windowHeight) {
+      // Section is fully in the middle or scrolling past top
+      else if (rect.top <= OFFSET) {
         newScale = 1;
         newRadius = 0;
       }

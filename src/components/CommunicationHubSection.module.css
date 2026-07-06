@@ -85,8 +85,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60cqw;
-  max-width: 320px;
+  width: 75cqw;
+  max-width: 360px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.3);
@@ -241,4 +241,21 @@
 .ctaButton:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .graphicContainer {
+    max-width: 360px;
+  }
+  
+  .iconNode {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .iconTooltip {
+    padding: 6px 10px;
+    font-size: 11px;
+    bottom: 115%;
+  }
 }

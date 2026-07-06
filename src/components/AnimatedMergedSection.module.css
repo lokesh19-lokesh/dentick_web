@@ -29,3 +29,17 @@
   z-index: 1;
   margin-top: -100vh;
 }
+
+@media (max-width: 991px) {
+  .stickyContainer {
+    display: none;
+  }
+  
+  .outerWrapper {
+    background-color: var(--primary);
+  }
+  
+  .contentLayer {
+    margin-top: 0;
+  }
+}
