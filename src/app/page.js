@@ -10,6 +10,7 @@ import HeroVideo from '../components/HeroVideo';
 import AccessibilitySection from '../components/AccessibilitySection';
 import CommunicationHubSection from '../components/CommunicationHubSection';
 import AnimatedMergedSection from '../components/AnimatedMergedSection';
+import CtaBanner from '../components/CtaBanner';
 
 // Small icons for the titles (solid white, simple paths)
 const SmallIcon = ({ children }) => (
@@ -110,6 +111,9 @@ export default function Home() {
 
         {/* Accessibility / Omnichannel Section */}
         <AccessibilitySection />
+
+        {/* CTA Banner Section */}
+        <CtaBanner />
 
         {/* Features Section */}
         <section className={styles.featuresSection}>

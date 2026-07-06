@@ -186,13 +186,13 @@
   border-color: #111 transparent transparent transparent;
 }
 
-/* Positioning based on the 500x500 viewBox logic (percentages) */
-.icon1 { top: 6%; left: 50%; animation-delay: 0s; }
-.icon2 { top: 28%; left: 88%; animation-delay: 0.5s; }
-.icon3 { top: 72%; left: 88%; animation-delay: 1.2s; }
-.icon4 { top: 94%; left: 50%; animation-delay: 0.8s; }
-.icon5 { top: 72%; left: 12%; animation-delay: 1.5s; }
-.icon6 { top: 28%; left: 12%; animation-delay: 0.2s; }
+/* Positioning the 6 nodes exactly at the SVG line endpoints */
+.icon1 { top: 6%; left: 50%; translate: -50% -50%; }
+.icon2 { top: 24%; left: 90%; translate: -50% -50%; }
+.icon3 { top: 76%; left: 90%; translate: -50% -50%; }
+.icon4 { top: 94%; left: 50%; translate: -50% -50%; }
+.icon5 { top: 76%; left: 10%; translate: -50% -50%; }
+.icon6 { top: 24%; left: 10%; translate: -50% -50%; }
 
 /* --- Right Side: Content --- */
 .contentContainer {
