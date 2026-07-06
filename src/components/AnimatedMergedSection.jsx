@@ -17,32 +17,32 @@ export default function AnimatedMergedSection({ children }) {
       // rect.top is the distance from top of viewport to top of section
       // rect.bottom is distance from top of viewport to bottom of section
       
-      let newScale = 0.85;
-      let newRadius = 64;
+      let newScale = 0.75;
+      let newRadius = 80;
 
       // Section is fully in the middle of the screen
       if (rect.top <= windowHeight * 0.2 && rect.bottom >= windowHeight * 0.8) {
         newScale = 1;
         newRadius = 0;
       } else {
-        // Calculate a progress value between 0.85 and 1
+        // Calculate a progress value between 0.75 and 1
         // When entering from bottom
         if (rect.top > windowHeight * 0.2 && rect.top < windowHeight) {
           const progress = 1 - ((rect.top - windowHeight * 0.2) / (windowHeight * 0.8));
-          newScale = 0.85 + (0.15 * progress);
-          newRadius = 64 - (64 * progress);
+          newScale = 0.75 + (0.25 * progress);
+          newRadius = 80 - (80 * progress);
         }
         // When leaving from top
         else if (rect.bottom < windowHeight * 0.8 && rect.bottom > 0) {
           const progress = rect.bottom / (windowHeight * 0.8);
-          newScale = 0.85 + (0.15 * progress);
-          newRadius = 64 - (64 * progress);
+          newScale = 0.75 + (0.25 * progress);
+          newRadius = 80 - (80 * progress);
         }
       }
 
       // Clamp values
-      newScale = Math.max(0.85, Math.min(1, newScale));
-      newRadius = Math.max(0, Math.min(64, newRadius));
+      newScale = Math.max(0.75, Math.min(1, newScale));
+      newRadius = Math.max(0, Math.min(80, newRadius));
 
       setScaleFactor(newScale);
       setBorderRadius(newRadius);
