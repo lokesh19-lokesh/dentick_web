@@ -1,10 +1,39 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState, useRef } from 'react';
 import styles from './MobileMockups.module.css';
 
 export default function MobileMockups() {
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          // Optional: observer.disconnect(); if you only want it to animate once
+        } else {
+           // Uncomment if you want it to re-animate every time it enters
+           setIsVisible(false);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <>
-      <div className={`${styles.mobilePhone} ${styles.phone1}`}>
+    <div ref={containerRef} style={{ position: 'relative', width: '100%', height: '100%' }}>
+      <div className={`${styles.mobilePhone} ${styles.phone1} ${isVisible ? styles.visible : ''}`}>
         <div className={styles.uiHeader}>
           <div className={styles.uiTitle}>WhatsApp CRM</div>
         </div>
@@ -19,7 +48,7 @@ export default function MobileMockups() {
         </div>
       </div>
       
-      <div className={`${styles.mobilePhone} ${styles.phone2}`}>
+      <div className={`${styles.mobilePhone} ${styles.phone2} ${isVisible ? styles.visible : ''}`}>
         <div className={styles.uiHeaderDark}>
           <div className={styles.uiTitle}>Patient Profile</div>
         </div>
@@ -40,7 +69,7 @@ export default function MobileMockups() {
         </div>
       </div>
       
-      <div className={`${styles.mobilePhone} ${styles.phone3}`}>
+      <div className={`${styles.mobilePhone} ${styles.phone3} ${isVisible ? styles.visible : ''}`}>
         <div className={styles.uiHeader}>
           <div className={styles.uiTitle}>AI Receptionist</div>
         </div>
@@ -51,7 +80,7 @@ export default function MobileMockups() {
         </div>
       </div>
 
-      <div className={`${styles.mobilePhone} ${styles.phone4}`}>
+      <div className={`${styles.mobilePhone} ${styles.phone4} ${isVisible ? styles.visible : ''}`}>
         <div className={styles.uiHeaderDark}>
           <div className={styles.uiTitle}>Schedule</div>
         </div>
@@ -70,6 +99,6 @@ export default function MobileMockups() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

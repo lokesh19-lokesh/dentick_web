@@ -43,6 +43,14 @@
   aspect-ratio: 1;
   margin: 0 auto;
   container-type: inline-size;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.graphicContainer.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .linesSvg {
@@ -77,109 +85,67 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 56cqw;
-  background-color: white;
-  border-radius: 3.2cqw;
-  padding: 4.8cqw;
-  box-shadow: 0 4cqw 8cqw rgba(0,0,0,0.3);
+  width: 60cqw;
+  max-width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
   z-index: 10;
-  color: #333;
+  overflow: hidden;
+  color: var(--text);
 }
 
 .cardHeader {
-  font-size: 3.5cqw;
+  background: var(--background);
+  padding: 1rem;
   font-weight: 700;
-  margin-bottom: 3.2cqw;
-  letter-spacing: 0.5px;
-  color: #111;
+  font-size: 0.85rem;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .cardBody {
-  display: flex;
-  flex-direction: column;
-  gap: 3.2cqw;
+  padding: 1rem;
 }
 
 .textArea {
-  border: 1px solid #ddd;
-  border-radius: 1.6cqw;
-  padding: 2.4cqw;
-  font-size: 2.8cqw;
-  color: #555;
-  background-color: #f9f9f9;
-}
-
-.cardGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.sectionTitle {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #777;
-  margin-bottom: 0.5rem;
-}
-
-.checkboxLabel {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.75rem;
-  color: #444;
-  margin-bottom: 0.4rem;
-}
-
-.checkboxLabel input[type="checkbox"] {
-  accent-color: var(--primary);
-  width: 14px;
-  height: 14px;
-}
-
-.sendButton {
-  width: 100%;
-  background-color: #e53e3e; /* Action color */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 0.75rem;
-  font-weight: 700;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: opacity 0.2s;
-  margin-top: 0.5rem;
-}
-
-.sendButton:hover {
-  opacity: 0.9;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  min-height: 80px;
 }
 
 /* Floating Icons */
-@keyframes float {
-  0%, 100% {
-    transform: translate(-50%, -50%);
-  }
-  50% {
-    transform: translate(-50%, calc(-50% - 2cqw));
-  }
-}
-
 .iconNode {
   position: absolute;
-  width: 10cqw;
-  height: 10cqw;
+  width: 48px;
+  height: 48px;
+  background: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 15;
-  box-shadow: 0 2cqw 4cqw rgba(0,0,0,0.2);
-  transform: translate(-50%, -50%);
-  transition: transform 0.3s, background-color 0.3s;
-  background-color: white;
-  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  z-index: 20;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.8s, translate 0.8s;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.iconNode.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.iconNode.visible:hover {
+  transform: scale(1.15);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
 .iconNode svg {
