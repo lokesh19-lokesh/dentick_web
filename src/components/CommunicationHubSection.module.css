@@ -72,8 +72,9 @@
   position: relative;
   width: 100%;
   max-width: 500px;
-  aspect-ratio: 1; /* square 500x500 */
+  aspect-ratio: 1;
   margin: 0 auto;
+  container-type: inline-size;
 }
 
 .linesSvg {
@@ -108,19 +109,19 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 280px;
+  width: 56cqw;
   background-color: white;
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border-radius: 3.2cqw;
+  padding: 4.8cqw;
+  box-shadow: 0 4cqw 8cqw rgba(0,0,0,0.3);
   z-index: 10;
   color: #333;
 }
 
 .cardHeader {
-  font-size: 0.9rem;
+  font-size: 3.5cqw;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 3.2cqw;
   letter-spacing: 0.5px;
   color: #111;
 }
@@ -128,14 +129,14 @@
 .cardBody {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3.2cqw;
 }
 
 .textArea {
   border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 0.75rem;
-  font-size: 0.85rem;
+  border-radius: 1.6cqw;
+  padding: 2.4cqw;
+  font-size: 2.8cqw;
   color: #555;
   background-color: #f9f9f9;
 }
@@ -193,24 +194,29 @@
     transform: translate(-50%, -50%);
   }
   50% {
-    transform: translate(-50%, calc(-50% - 10px));
+    transform: translate(-50%, calc(-50% - 2cqw));
   }
 }
 
 .iconNode {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 10cqw;
+  height: 10cqw;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 5;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 2cqw 4cqw rgba(0,0,0,0.2);
   transform: translate(-50%, -50%);
   transition: transform 0.3s, background-color 0.3s;
   background-color: white;
   animation: float 4s ease-in-out infinite;
+}
+
+.iconNode svg {
+  width: 4.8cqw;
+  height: 4.8cqw;
 }
 
 .iconNode:hover {
@@ -220,20 +226,20 @@
 
 .iconTooltip {
   position: absolute;
-  top: -30px;
+  bottom: 110%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #222;
+  background-color: #111;
   color: white;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 0.75rem;
+  padding: 1.2cqw 2cqw;
+  border-radius: 1cqw;
+  font-size: 2.2cqw;
   font-weight: 600;
   white-space: nowrap;
+  pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.2s ease;
-  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   z-index: 20;
 }
