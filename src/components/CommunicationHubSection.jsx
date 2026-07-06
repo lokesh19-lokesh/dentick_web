@@ -35,6 +35,7 @@ export default function CommunicationHubSection() {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 {feature.icon}
               </svg>
+              <div className={styles.iconTooltip}>{feature.title}</div>
             </div>
           ))}
         </div>

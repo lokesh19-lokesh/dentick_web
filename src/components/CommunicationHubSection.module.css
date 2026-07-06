@@ -151,6 +151,43 @@
   transform: translate(-50%, -50%) scale(1.15);
 }
 
+.iconTooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 20;
+}
+
+.iconTooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #222 transparent transparent transparent;
+}
+
+.iconNode:hover .iconTooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -40px;
+}
+
 /* Positioning based on the 500x500 viewBox logic (percentages) */
 .icon1 { top: 6%; left: 50%; }
 .icon2 { top: 28%; left: 88%; }
