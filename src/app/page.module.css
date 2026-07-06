@@ -258,11 +258,9 @@
   }
 }
 
-/* --- Mobile Showcase Section --- */
 .mobileShowcase {
   padding: 6rem 5%;
   color: white;
-  overflow: hidden;
   position: relative;
   z-index: 1;
 }
