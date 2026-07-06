@@ -856,17 +856,34 @@
 }
 
 .testimonialsGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin-left: -5vw;
+  margin-right: -5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 1.5rem;
+  scrollbar-width: none;
   text-align: left;
+}
+
+.testimonialsGrid::-webkit-scrollbar {
+  display: none;
 }
 
 @media (min-width: 768px) {
   .testimonialsGrid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    overflow-x: visible;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 2rem;
+    max-width: 1200px;
   }
 }
 
@@ -879,6 +896,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 0 0 85vw;
+  scroll-snap-align: center;
+}
+
+@media (min-width: 768px) {
+  .testimonialCard {
+    flex: none;
+  }
 }
 
 .quote {
