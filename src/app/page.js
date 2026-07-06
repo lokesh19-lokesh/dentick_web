@@ -129,29 +129,44 @@ export default function Home() {
 
         {/* How It Works Section */}
         <section className={styles.howItWorks}>
-          <div className={styles.sectionHeader}>
-            <h2>How it works</h2>
-            <p>Go live in 7 days. Grow forever.</p>
+          <div className={styles.howItWorksContainer}>
+            {/* Left Side: Text and Steps */}
+            <div className={styles.howItWorksLeft}>
+              <div className={styles.sectionHeaderLeft}>
+                <h2>How it works</h2>
+                <p>Go live in 7 days. Grow forever.</p>
+              </div>
+              
+              <div className={styles.stepsList}>
+                <div className={styles.stepItem}>
+                  <div className={styles.stepNumber}>1</div>
+                  <div className={styles.stepContent}>
+                    <h3>Onboard</h3>
+                    <p>We migrate patients, set up WhatsApp & AI agent in 48 hours — white-glove included.</p>
+                  </div>
+                </div>
+                <div className={styles.stepItem}>
+                  <div className={styles.stepNumber}>2</div>
+                  <div className={styles.stepContent}>
+                    <h3>Automate</h3>
+                    <p>AI starts qualifying leads, nurturing patients and recovering no-shows from day one.</p>
+                  </div>
+                </div>
+                <div className={styles.stepItem}>
+                  <div className={styles.stepNumber}>3</div>
+                  <div className={styles.stepContent}>
+                    <h3>Accelerate</h3>
+                    <p>Weekly growth reviews, ad management and a dedicated success manager.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side: Video */}
+            <div className={styles.howItWorksRight}>
+              <HeroVideo />
+            </div>
           </div>
-          
-          <div className={styles.stepsContainer}>
-            <div className={styles.step}>
-              <div className={styles.stepNumber}>1</div>
-              <h3>Onboard</h3>
-              <p>We migrate patients, set up WhatsApp & AI agent in 48 hours — white-glove included.</p>
-            </div>
-            <div className={styles.step}>
-              <div className={styles.stepNumber}>2</div>
-              <h3>Automate</h3>
-              <p>AI starts qualifying leads, nurturing patients and recovering no-shows from day one.</p>
-            </div>
-            <div className={styles.step}>
-              <div className={styles.stepNumber}>3</div>
-              <h3>Accelerate</h3>
-              <p>Weekly growth reviews, ad management and a dedicated success manager.</p>
-            </div>
-          </div>
-          
         </section>
 
         {/* Testimonials Section */}
