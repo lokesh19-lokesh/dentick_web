@@ -57,13 +57,15 @@ export default function AnimatedMergedSection({ children }) {
 
   return (
     <div className={styles.outerWrapper} ref={containerRef}>
-      <div 
-        className={styles.animatedBackground}
-        style={{
-          width: `${scaleFactor * 100}%`,
-          borderRadius: `${borderRadius}px`,
-        }}
-      />
+      <div className={styles.stickyContainer}>
+        <div 
+          className={styles.animatedBackground}
+          style={{
+            width: `${scaleFactor * 100}%`,
+            borderRadius: `${borderRadius}px`,
+          }}
+        />
+      </div>
       <div className={styles.contentLayer}>
         {children}
       </div>
