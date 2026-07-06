@@ -1,9 +1,27 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { featuresData } from '../data/features';
 import styles from './CommunicationHubSection.module.css';
 
+const hubMessages = [
+  { title: "WHATSAPP CRM", text: "Reminder: Your appointment is tomorrow at 10 AM! Reply YES to confirm." },
+  { title: "AI RECEPTIONIST", text: "Voice Call: 'Hello, I'd like to reschedule my appointment for next Tuesday...'" },
+  { title: "EMAIL CAMPAIGN", text: "Newsletter: Check out our new teeth whitening offers for the summer!" },
+  { title: "SMS AUTOMATION", text: "Hi Sarah, it's time for your 6-month checkup. Click here to book." },
+  { title: "GOOGLE REVIEWS", text: "Review Request: Thank you for visiting! Please leave us a Google review." }
+];
+
 export default function CommunicationHubSection() {
+  const [msgIndex, setMsgIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setMsgIndex((prev) => (prev + 1) % hubMessages.length);
+    }, 3500); // Change message every 3.5 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className={styles.section}>
       {/* Decorative Background Shapes */}
@@ -25,10 +43,10 @@ export default function CommunicationHubSection() {
 
           {/* Central Card */}
           <div className={styles.centralCard}>
-            <div className={styles.cardHeader}>WHATSAPP CRM</div>
+            <div className={styles.cardHeader}>{hubMessages[msgIndex].title}</div>
             <div className={styles.cardBody}>
               <div className={styles.textArea}>
-                Reminder: Your appointment is tomorrow at 10 AM! Reply YES to confirm.
+                {hubMessages[msgIndex].text}
               </div>
             </div>
           </div>
