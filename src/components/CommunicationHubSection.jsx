@@ -6,6 +6,10 @@ import styles from './CommunicationHubSection.module.css';
 export default function CommunicationHubSection() {
   return (
     <section className={styles.section}>
+      {/* Decorative Background Shapes */}
+      <div className={styles.bgShape1}></div>
+      <div className={styles.bgShape2}></div>
+
       <div className={styles.container}>
         {/* Left Side: Graphics */}
         <div className={styles.graphicContainer}>
