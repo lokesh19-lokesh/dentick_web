@@ -8,6 +8,7 @@ import Counter from '../components/Counter';
 import MobileMockups from '../components/MobileMockups';
 import HeroVideo from '../components/HeroVideo';
 import AccessibilitySection from '../components/AccessibilitySection';
+import CommunicationHubSection from '../components/CommunicationHubSection';
 
 // Small icons for the titles (solid white, simple paths)
 const SmallIcon = ({ children }) => (
@@ -99,6 +100,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Communication Hub Section */}
+        <CommunicationHubSection />
 
         {/* Accessibility / Omnichannel Section */}
         <AccessibilitySection />

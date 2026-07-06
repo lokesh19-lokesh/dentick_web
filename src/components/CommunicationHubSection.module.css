@@ -1,0 +1,208 @@
+.section {
+  padding: 6rem 5%;
+  background-color: #d11e2f; /* Reference image uses red, but we can stick to DentTick style. Let's use #da291c to closely match the ref or a deep primary. I'll use a strong red/crimson as requested by "like in our site" reference image. Wait, the user said "like in our site" but showed a screenshot from Edlio which is red. Actually I'll use a deep purple gradient to fit DentTick better. */
+  background: linear-gradient(135deg, var(--primary), #5a189a);
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+}
+
+/* --- Left Side: Graphic --- */
+.graphicContainer {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1; /* square 500x500 */
+  margin: 0 auto;
+}
+
+.linesSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.line {
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* Central Card */
+.centralCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  z-index: 10;
+  color: #333;
+}
+
+.cardHeader {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.textArea {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  color: #555;
+  background-color: #f9f9f9;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: #444;
+  margin-bottom: 0.4rem;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  accent-color: var(--primary);
+  width: 14px;
+  height: 14px;
+}
+
+.sendButton {
+  width: 100%;
+  background-color: #e53e3e; /* Action color */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 0.5rem;
+}
+
+.sendButton:hover {
+  opacity: 0.9;
+}
+
+/* Floating Icons */
+.iconNode {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s;
+  background-color: white;
+}
+
+.iconNode:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+/* Positioning based on the 500x500 viewBox logic (percentages) */
+.icon1 { top: 6%; left: 50%; }
+.icon2 { top: 28%; left: 88%; }
+.icon3 { top: 72%; left: 88%; }
+.icon4 { top: 94%; left: 50%; }
+.icon5 { top: 72%; left: 12%; }
+.icon6 { top: 28%; left: 12%; }
+
+/* --- Right Side: Content --- */
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contentContainer h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 992px) {
+  .contentContainer h2 {
+    font-size: 3.5rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: white;
+  color: var(--primary);
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
