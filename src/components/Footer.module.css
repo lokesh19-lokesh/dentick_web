@@ -48,13 +48,14 @@
 }
 
 .linksContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1rem;
 }
 
 @media (min-width: 640px) {
   .linksContainer {
+    display: flex;
     flex-direction: row;
     gap: 4rem;
   }
