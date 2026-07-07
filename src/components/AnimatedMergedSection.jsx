@@ -4,12 +4,14 @@ import styles from './AnimatedMergedSection.module.css';
 
 export default function AnimatedMergedSection({ children }) {
   const containerRef = useRef(null);
-  const [scaleFactor, setScaleFactor] = useState(0.96);
+  const [scaleFactor, setScaleFactor] = useState(0.90);
   const [borderRadius, setBorderRadius] = useState(40);
+  const [bgTop, setBgTop] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current) return;
+      
       // We only want this effect on desktop. On mobile, we use a solid background.
       if (window.innerWidth <= 991) {
         setScaleFactor(1);
@@ -19,29 +21,39 @@ export default function AnimatedMergedSection({ children }) {
       
       const rect = containerRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      
       const OFFSET = windowHeight * 0.25;
-      let newScale = 0.96;
-      let newRadius = 40;
 
-      // Entering from bottom
+      // 1. Calculate Sticky Polyfill Top
+      let currentTop = 0;
+      if (rect.top < 0) {
+        currentTop = -rect.top;
+      }
+      const maxTop = Math.max(0, rect.height - windowHeight);
+      currentTop = Math.min(currentTop, maxTop);
+      setBgTop(currentTop);
+
+      // 2. Calculate Scale & Radius
+      let newScale = 1;
+      let newRadius = 0;
+
+      // Entering from bottom (top of section is in viewport)
       if (rect.top > OFFSET && rect.top <= windowHeight) {
         const progress = 1 - ((rect.top - OFFSET) / (windowHeight - OFFSET));
-        newScale = 0.96 + (0.04 * progress);
+        newScale = 0.90 + (0.10 * progress);
         newRadius = 40 - (40 * progress);
       }
-      // Section is fully in the middle or scrolling past top
-      else if (rect.top <= OFFSET) {
+      // Section is fully in the middle or leaving from top
+      else if (rect.top <= OFFSET && rect.bottom > 0) {
         newScale = 1;
         newRadius = 0;
       }
-      // Completely outside
+      // Completely outside (above or below)
       else {
-        newScale = 0.96;
+        newScale = 0.90;
         newRadius = 40;
       }
 
-      newScale = Math.max(0.96, Math.min(1, newScale));
+      newScale = Math.max(0.90, Math.min(1, newScale));
       newRadius = Math.max(0, Math.min(40, newRadius));
 
       setScaleFactor(newScale);
@@ -56,15 +68,21 @@ export default function AnimatedMergedSection({ children }) {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
     }
-  }, []);
+  }, []); // Trigger hot reload v2
 
   return (
     <div className={styles.outerWrapper} ref={containerRef}>
-      <div className={styles.stickyContainer}>
+      <div 
+        className={styles.edlioBackgroundContainer}
+        style={{ top: `${bgTop}px` }}
+      >
         <div 
           className={styles.animatedBackground}
           style={{
-            width: `${scaleFactor * 100}%`,
+            width: `${scaleFactor * 100}vw`,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            position: 'absolute',
             borderRadius: `${borderRadius}px`,
           }}
         />
