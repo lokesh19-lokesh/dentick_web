@@ -20,13 +20,46 @@ const CheckIcon = () => (
 );
 
 export const metadata = {
-  title: 'Features | DentTick AI',
-  description: 'Explore the features of DentTick AI, the unified growth operating system.',
+  title: 'Features | DentTick AI Dental Software',
+  description: 'Explore the powerful features of DentTick AI, including our AI Dental Receptionist, WhatsApp CRM, and automated patient acquisition tools built for Indian clinics.',
+  keywords: ['dental software features', 'AI receptionist for dentists', 'WhatsApp dental CRM', 'patient management system India', 'dental clinic automation'],
+  openGraph: {
+    title: 'DentTick AI Features | The Ultimate Dental Growth OS',
+    description: 'Explore the powerful features of DentTick AI, including our AI Dental Receptionist, WhatsApp CRM, and automated patient acquisition tools built for Indian clinics.',
+    url: 'https://denttick.com/features',
+    images: [{ url: '/images/og-image.jpg' }],
+  },
+  alternates: {
+    canonical: '/features',
+  },
+  other: {
+    "geo.region": "IN",
+    "geo.placename": "India",
+    "subject": "Dental Software Features",
+    "audience": "Dentists, Dental Clinics, Orthodontists",
+  }
 };
 
 export default function Features() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'DentTick AI Features',
+    description: 'Explore the powerful features of DentTick AI, including our AI Dental Receptionist, WhatsApp CRM, and automated patient acquisition tools built for Indian clinics.',
+    url: 'https://denttick.com/features',
+    about: {
+      '@type': 'SoftwareApplication',
+      name: 'DentTick AI',
+      applicationCategory: 'BusinessApplication'
+    }
+  };
+
   return (
     <div className={styles.main}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       
       <main>

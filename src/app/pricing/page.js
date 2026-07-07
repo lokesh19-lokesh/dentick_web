@@ -5,8 +5,24 @@ import FaqAccordion from './FaqAccordion';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Pricing | DentTick AI',
-  description: 'Simple and transparent pricing for your dental clinic.',
+  title: 'Pricing & Plans | DentTick AI Dental Software',
+  description: 'Simple, transparent pricing for Indian dental clinics. Start free for 14 days and scale your practice with DentTick AI. Plans starting at ₹2,999/mo.',
+  keywords: ['dental software pricing India', 'affordable dental CRM', 'clinic management software cost', 'AI receptionist pricing'],
+  openGraph: {
+    title: 'DentTick AI Pricing | Simple, Transparent Plans',
+    description: 'Simple, transparent pricing for Indian dental clinics. Start free for 14 days and scale your practice with DentTick AI.',
+    url: 'https://denttick.com/pricing',
+    images: [{ url: '/images/og-image.jpg' }],
+  },
+  alternates: {
+    canonical: '/pricing',
+  },
+  other: {
+    "geo.region": "IN",
+    "geo.placename": "India",
+    "subject": "Dental Software Pricing",
+    "audience": "Dentists, Dental Clinics",
+  }
 };
 
 const CheckIcon = () => (
@@ -16,8 +32,27 @@ const CheckIcon = () => (
 );
 
 export default function Pricing() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'DentTick AI Pricing',
+    description: 'Simple, transparent pricing for Indian dental clinics. Start free for 14 days and scale your practice with DentTick AI.',
+    url: 'https://denttick.com/pricing',
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'INR',
+      lowPrice: '2999',
+      highPrice: '9999',
+      offerCount: '3'
+    }
+  };
+
   return (
     <div className={styles.pageWrapper}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main>
         <div className={styles.hero}>

@@ -3,8 +3,26 @@ import Footer from '../../components/Footer';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Contact Us | DentTick AI',
-  description: 'Get in touch to book a demo and learn how DentTick AI can help your clinic.',
+  title: 'Contact Us | Book a Demo | DentTick AI',
+  description: 'Get in touch with the DentTick AI team. Book a free demo to see how our dental growth OS can scale your clinic in India.',
+  keywords: ['contact DentTick AI', 'book dental software demo', 'dental clinic CRM demo', 'DentTick AI phone number', 'dental software support India'],
+  openGraph: {
+    title: 'Contact DentTick AI | Book a Free Demo',
+    description: 'Get in touch with the DentTick AI team. Book a free demo to see how our dental growth OS can scale your clinic in India.',
+    url: 'https://denttick.com/contact',
+    images: [{ url: '/images/og-image.jpg' }],
+  },
+  alternates: {
+    canonical: '/contact',
+  },
+  other: {
+    "geo.region": "IN-KA", // Karnataka
+    "geo.placename": "Bengaluru",
+    "geo.position": "12.9716;77.5946",
+    "ICBM": "12.9716, 77.5946",
+    "subject": "Contact DentTick AI",
+    "audience": "Dentists, Dental Clinics",
+  }
 };
 
 const MailIcon = () => (
@@ -33,8 +51,33 @@ const LocationIcon = () => (
 );
 
 export default function Contact() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact DentTick AI',
+    description: 'Get in touch with the DentTick AI team. Book a free demo to see how our dental growth OS can scale your clinic in India.',
+    url: 'https://denttick.com/contact',
+    mainEntity: {
+      '@type': 'LocalBusiness',
+      name: 'DentTick AI',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'WeWork Galaxy, MG Road',
+        addressLocality: 'Bengaluru',
+        postalCode: '560001',
+        addressCountry: 'IN'
+      },
+      telephone: '+918000000000',
+      email: 'hello@dentick.ai'
+    }
+  };
+
   return (
     <div className={styles.pageWrapper}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main>
         <div className={styles.hero}>

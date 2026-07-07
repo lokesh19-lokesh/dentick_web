@@ -5,13 +5,46 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'About Us | DentTick AI',
-  description: 'Learn more about DentTick AI and our mission.',
+  title: 'About Us | DentTick AI Dental Software',
+  description: 'Learn how DentTick AI is building the ultimate operating system for modern Indian dentistry. Trusted by 500+ clinics across 40+ cities.',
+  keywords: ['about DentTick AI', 'dental software company India', 'dental clinic growth partners', 'dentistry software startup'],
+  openGraph: {
+    title: 'About DentTick AI | Building the Dental Growth OS',
+    description: 'Learn how DentTick AI is building the ultimate operating system for modern Indian dentistry. Trusted by 500+ clinics across 40+ cities.',
+    url: 'https://denttick.com/about',
+    images: [{ url: '/images/og-image.jpg' }],
+  },
+  alternates: {
+    canonical: '/about',
+  },
+  other: {
+    "geo.region": "IN",
+    "geo.placename": "India",
+    "subject": "About DentTick AI",
+    "audience": "Dentists, Dental Clinics",
+  }
 };
 
 export default function About() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'About DentTick AI',
+    description: 'Learn how DentTick AI is building the ultimate operating system for modern Indian dentistry.',
+    url: 'https://denttick.com/about',
+    publisher: {
+      '@type': 'Organization',
+      name: 'DentTick AI',
+      foundingDate: '2024'
+    }
+  };
+
   return (
     <div className={styles.pageWrapper}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main>
         <div className={styles.hero}>
