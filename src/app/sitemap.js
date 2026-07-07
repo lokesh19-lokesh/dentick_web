@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://denttick.com';
+  const baseUrl = 'https://denttickai.com';
 
   return [
     {

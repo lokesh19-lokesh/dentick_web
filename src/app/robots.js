@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://denttick.com/sitemap.xml',
+    sitemap: 'https://denttickai.com/sitemap.xml',
   }
 }

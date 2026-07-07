@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'Contact DentTick AI | Book a Free Demo',
     description: 'Get in touch with the DentTick AI team. Book a free demo to see how our dental growth OS can scale your clinic in India.',
-    url: 'https://denttick.com/contact',
+    url: 'https://denttickai.com/contact',
     images: [{ url: '/images/og-image.jpg' }],
   },
   alternates: {
@@ -56,7 +56,7 @@ export default function Contact() {
     '@type': 'ContactPage',
     name: 'Contact DentTick AI',
     description: 'Get in touch with the DentTick AI team. Book a free demo to see how our dental growth OS can scale your clinic in India.',
-    url: 'https://denttick.com/contact',
+    url: 'https://denttickai.com/contact',
     mainEntity: {
       '@type': 'LocalBusiness',
       name: 'DentTick AI',

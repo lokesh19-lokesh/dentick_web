@@ -11,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: 'DentTick AI Pricing | Simple, Transparent Plans',
     description: 'Simple, transparent pricing for Indian dental clinics. Start free for 14 days and scale your practice with DentTick AI.',
-    url: 'https://denttick.com/pricing',
+    url: 'https://denttickai.com/pricing',
     images: [{ url: '/images/og-image.jpg' }],
   },
   alternates: {
@@ -37,7 +37,7 @@ export default function Pricing() {
     '@type': 'WebPage',
     name: 'DentTick AI Pricing',
     description: 'Simple, transparent pricing for Indian dental clinics. Start free for 14 days and scale your practice with DentTick AI.',
-    url: 'https://denttick.com/pricing',
+    url: 'https://denttickai.com/pricing',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',

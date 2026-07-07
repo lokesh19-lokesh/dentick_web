@@ -26,7 +26,7 @@ export const metadata = {
   openGraph: {
     title: 'DentTick AI Features | The Ultimate Dental Growth OS',
     description: 'Explore the powerful features of DentTick AI, including our AI Dental Receptionist, WhatsApp CRM, and automated patient acquisition tools built for Indian clinics.',
-    url: 'https://denttick.com/features',
+    url: 'https://denttickai.com/features',
     images: [{ url: '/images/og-image.jpg' }],
   },
   alternates: {
@@ -46,7 +46,7 @@ export default function Features() {
     '@type': 'WebPage',
     name: 'DentTick AI Features',
     description: 'Explore the powerful features of DentTick AI, including our AI Dental Receptionist, WhatsApp CRM, and automated patient acquisition tools built for Indian clinics.',
-    url: 'https://denttick.com/features',
+    url: 'https://denttickai.com/features',
     about: {
       '@type': 'SoftwareApplication',
       name: 'DentTick AI',

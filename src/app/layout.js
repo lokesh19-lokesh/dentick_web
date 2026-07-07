@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://denttick.com'),
+  metadataBase: new URL('https://denttickai.com'),
   title: {
     default: "DentTick AI | Dental Growth Operating System India",
     template: "%s | DentTick AI"
@@ -30,7 +30,7 @@ export const metadata = {
     "best dental software in India",
     "dentist operating system"
   ],
-  authors: [{ name: "DentTick AI", url: "https://denttick.com" }],
+  authors: [{ name: "DentTick AI", url: "https://denttickai.com" }],
   creator: "DentTick",
   publisher: "DentTick AI",
   formatDetection: {
@@ -47,7 +47,7 @@ export const metadata = {
   openGraph: {
     title: "DentTick AI | Dental Growth Operating System India",
     description: "Automate patient acquisition, communications and clinic management in one seamless AI platform.",
-    url: "https://denttick.com",
+    url: "https://denttickai.com",
     siteName: "DentTick AI",
     images: [
       {
@@ -100,12 +100,12 @@ export default function RootLayout({ children }) {
     operatingSystem: 'Web-based',
     applicationCategory: 'BusinessApplication',
     description: 'DentTick is India\'s leading AI-powered dental growth operating system. Automate patient acquisition, WhatsApp CRM, and clinic management.',
-    url: 'https://denttick.com',
+    url: 'https://denttickai.com',
     publisher: {
       '@type': 'Organization',
       name: 'DentTick AI',
-      url: 'https://denttick.com',
-      logo: 'https://denttick.com/images/logo.png',
+      url: 'https://denttickai.com',
+      logo: 'https://denttickai.com/images/logo.png',
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer support',

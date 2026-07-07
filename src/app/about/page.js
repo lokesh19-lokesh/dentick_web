@@ -11,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: 'About DentTick AI | Building the Dental Growth OS',
     description: 'Learn how DentTick AI is building the ultimate operating system for modern Indian dentistry. Trusted by 500+ clinics across 40+ cities.',
-    url: 'https://denttick.com/about',
+    url: 'https://denttickai.com/about',
     images: [{ url: '/images/og-image.jpg' }],
   },
   alternates: {
@@ -31,7 +31,7 @@ export default function About() {
     '@type': 'AboutPage',
     name: 'About DentTick AI',
     description: 'Learn how DentTick AI is building the ultimate operating system for modern Indian dentistry.',
-    url: 'https://denttick.com/about',
+    url: 'https://denttickai.com/about',
     publisher: {
       '@type': 'Organization',
       name: 'DentTick AI',
