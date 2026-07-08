@@ -34,17 +34,44 @@ export default function MobileMockups() {
   return (
     <div ref={containerRef} style={{ position: 'relative', width: '100%', height: '100%' }}>
       <div className={`${styles.mobilePhone} ${styles.phone1} ${isVisible ? styles.visible : ''}`}>
-        <div className={styles.uiHeader}>
+        <div className={styles.uiHeaderDark}>
           <div className={styles.uiTitle}>WhatsApp CRM</div>
         </div>
-        <div className={styles.uiBody}>
-          <div className={styles.chatBubbleRecv}>Hi, looking to book a cleaning.</div>
-          <div className={styles.chatBubbleSent}>Of course! Does tomorrow 10am work?</div>
-          <div className={styles.chatBubbleRecv}>Yes, perfect.</div>
-          <div className={styles.chatBubbleSent}>Great, you're confirmed!</div>
-        </div>
-        <div className={styles.uiFooter}>
-          <div className={styles.uiInput}>Type a message...</div>
+        <div className={styles.crmGraphBody}>
+          <div className={styles.crmStatCards}>
+            <div className={styles.crmStatCard}>
+              <div className={styles.crmStatValue}>1,240</div>
+              <div className={styles.crmStatLabel}>Msgs Sent</div>
+            </div>
+            <div className={styles.crmStatCard}>
+              <div className={styles.crmStatValue}>68%</div>
+              <div className={styles.crmStatLabel}>Open Rate</div>
+            </div>
+          </div>
+
+          <div className={styles.crmChartContainer}>
+            <div className={styles.crmChartTitle}>Campaign Performance</div>
+            <div className={styles.crmDonut}>
+              <div className={styles.crmDonutInner}>
+                 <div className={styles.crmDonutValue}>+24%</div>
+                 <div className={styles.crmDonutLabel}>Growth</div>
+              </div>
+            </div>
+            <div className={styles.crmLegend}>
+              <div className={styles.crmLegendItem}>
+                <div className={styles.crmDot} style={{background: 'var(--primary)'}}></div>
+                Booked
+              </div>
+              <div className={styles.crmLegendItem}>
+                <div className={styles.crmDot} style={{background: '#34d399'}}></div>
+                Replied
+              </div>
+              <div className={styles.crmLegendItem}>
+                <div className={styles.crmDot} style={{background: '#fbbf24'}}></div>
+                Sent
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
