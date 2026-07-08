@@ -2,6 +2,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -133,6 +134,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );
