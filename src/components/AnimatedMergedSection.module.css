@@ -4,7 +4,8 @@
 }
 
 .edlioBackgroundContainer {
-  position: absolute;
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 100vh;
   z-index: -1;
@@ -16,7 +17,7 @@
 .animatedBackground {
   position: absolute;
   top: 0;
-  height: 100vh; /* visually fills screen */
+  height: 100vh;
   background-color: var(--primary);
   will-change: width, border-radius;
   transition: width 0.1s ease-out, border-radius 0.1s ease-out;
@@ -26,6 +27,89 @@
   position: relative;
   width: 100%;
   z-index: 1;
+  margin-top: -100vh;
+}
+
+/* --- DUAL LAYOUT TOGGLES --- */
+.desktopView {
+  display: none;
+}
+.mobileView {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .desktopView {
+    display: block;
+  }
+  .mobileView {
+    display: none;
+  }
+
+  /* --- DESKTOP SCROLLJACKING STYLES --- */
+  .scrolljackingContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start; /* CRITICAL for sticky to work correctly */
+  }
+
+  /* Left column that sticks */
+  .stickyColumn {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* A wrapper to hold both graphics on top of each other */
+  .graphicWrapperContainer {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Gives enough space for the graphics */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* The individual graphics that crossfade */
+  .graphicItem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    opacity: 0;
+    pointer-events: none; /* prevent invisible item from blocking clicks */
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+  }
+
+  .graphicItem.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Right column that scrolls normally */
+  .scrollColumn {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25vh; /* Initial padding to center the first text */
+    padding-bottom: 25vh;
+  }
+
+  /* Each text block */
+  .textBlock {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 991px) {
@@ -41,6 +125,3 @@
     margin-top: 0;
   }
 }
-
-/* Force rebuild 2 */
-

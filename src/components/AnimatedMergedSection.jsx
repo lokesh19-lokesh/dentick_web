@@ -2,17 +2,25 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './AnimatedMergedSection.module.css';
 
-export default function AnimatedMergedSection({ children }) {
+export default function AnimatedMergedSection({ 
+  children,
+  mobileGraphic, 
+  mobileText,
+  hubGraphic, 
+  hubText
+}) {
   const containerRef = useRef(null);
+  const text1Ref = useRef(null);
+  const text2Ref = useRef(null);
+  
   const [scaleFactor, setScaleFactor] = useState(0.75);
   const [borderRadius, setBorderRadius] = useState(80);
-  const [bgTop, setBgTop] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
+  // Background shrink/enlarge effect
   useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current) return;
-      
-      // We only want this effect on desktop. On mobile, we use a solid background.
       if (window.innerWidth <= 991) {
         setScaleFactor(1);
         setBorderRadius(0);
@@ -23,32 +31,17 @@ export default function AnimatedMergedSection({ children }) {
       const windowHeight = window.innerHeight;
       const OFFSET = windowHeight * 0.25;
 
-      // 1. Calculate Sticky Polyfill Top
-      let currentTop = 0;
-      if (rect.top < 0) {
-        currentTop = -rect.top;
-      }
-      const maxTop = Math.max(0, rect.height - windowHeight);
-      currentTop = Math.min(currentTop, maxTop);
-      setBgTop(currentTop);
-
-      // 2. Calculate Scale & Radius
       let newScale = 1;
       let newRadius = 0;
 
-      // Entering from bottom (top of section is in viewport)
       if (rect.top > OFFSET && rect.top <= windowHeight) {
         const progress = 1 - ((rect.top - OFFSET) / (windowHeight - OFFSET));
         newScale = 0.75 + (0.25 * progress);
         newRadius = 80 - (80 * progress);
-      }
-      // Section is fully in the middle or leaving from top
-      else if (rect.top <= OFFSET && rect.bottom > 0) {
+      } else if (rect.top <= OFFSET && rect.bottom > 0) {
         newScale = 1;
         newRadius = 0;
-      }
-      // Completely outside (above or below)
-      else {
+      } else {
         newScale = 0.75;
         newRadius = 80;
       }
@@ -68,14 +61,33 @@ export default function AnimatedMergedSection({ children }) {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
     }
-  }, []); // Trigger hot reload v2
+  }, []);
+
+  // Intersection Observer for scrolljacking active index
+  useEffect(() => {
+    if (window.innerWidth <= 991) return; // Only for desktop
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target === text1Ref.current) setActiveIndex(0);
+            if (entry.target === text2Ref.current) setActiveIndex(1);
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when at least 50% of the text block is visible
+    );
+
+    if (text1Ref.current) observer.observe(text1Ref.current);
+    if (text2Ref.current) observer.observe(text2Ref.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className={styles.outerWrapper} ref={containerRef}>
-      <div 
-        className={styles.edlioBackgroundContainer}
-        style={{ top: `${bgTop}px` }}
-      >
+      <div className={styles.edlioBackgroundContainer}>
         <div 
           className={styles.animatedBackground}
           style={{
@@ -87,8 +99,39 @@ export default function AnimatedMergedSection({ children }) {
           }}
         />
       </div>
+      
       <div className={styles.contentLayer}>
-        {children}
+        {/* MOBILE VIEW: Preserved exactly as requested */}
+        <div className={styles.mobileView}>
+          {children}
+        </div>
+
+        {/* DESKTOP VIEW: Scrolljacking */}
+        <div className={styles.desktopView}>
+          <div className={styles.scrolljackingContainer}>
+            {/* Left Sticky Column */}
+            <div className={styles.stickyColumn}>
+              <div className={styles.graphicWrapperContainer}>
+                <div className={`${styles.graphicItem} ${activeIndex === 0 ? styles.active : ''}`}>
+                  {mobileGraphic}
+                </div>
+                <div className={`${styles.graphicItem} ${activeIndex === 1 ? styles.active : ''}`}>
+                  {hubGraphic}
+                </div>
+              </div>
+            </div>
+
+            {/* Right Scrolling Column */}
+            <div className={styles.scrollColumn}>
+              <div className={styles.textBlock} ref={text1Ref}>
+                {mobileText}
+              </div>
+              <div className={styles.textBlock} ref={text2Ref}>
+                {hubText}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

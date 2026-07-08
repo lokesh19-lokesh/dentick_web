@@ -8,7 +8,7 @@ import Counter from '../components/Counter';
 import MobileMockups from '../components/MobileMockups';
 import HeroVideo from '../components/HeroVideo';
 import AccessibilitySection from '../components/AccessibilitySection';
-import CommunicationHubSection from '../components/CommunicationHubSection';
+import CommunicationHubSection, { CommunicationHubGraphic, CommunicationHubText } from '../components/CommunicationHubSection';
 import AnimatedMergedSection from '../components/AnimatedMergedSection';
 import CtaBanner from '../components/CtaBanner';
 import CaseStudiesSection from '../components/CaseStudiesSection';
@@ -87,8 +87,30 @@ export default function Home() {
         </section>
 
         {/* Animated Merged Section */}
-        <AnimatedMergedSection>
-          {/* Mobile Showcase Section */}
+        <AnimatedMergedSection
+          mobileGraphic={
+            <div className={styles.mobilePhonesGrid} style={{ transform: 'none', zoom: 1 }}>
+              <MobileMockups />
+            </div>
+          }
+          mobileText={
+            <div className={styles.mobileShowcaseText}>
+              <h2>Run Your Clinic from Anywhere</h2>
+              <p className={styles.showcaseSubtitle}>Your entire growth engine, now in your pocket.</p>
+              <p>
+                Access patient records, manage appointments, and monitor revenue in real-time with the DentTick mobile app. From reviewing AI-booked appointments to responding instantly via our unified WhatsApp inbox, DentTick gives doctors and staff the power to deliver exceptional care without being tied to a desk.
+              </p>
+              <Link href="/contact" className={styles.showcaseBtn}>See it in action</Link>
+            </div>
+          }
+          hubGraphic={
+            <div style={{ width: '100%', maxWidth: '500px', margin: '0 auto', aspectRatio: '1', position: 'relative' }}>
+              <CommunicationHubGraphic />
+            </div>
+          }
+          hubText={<CommunicationHubText />}
+        >
+          {/* Mobile Showcase Section (Rendered only on Mobile via CSS) */}
           <section className={styles.mobileShowcase}>
             <div className={styles.mobileShowcaseContainer}>
               <div className={styles.mobilePhonesGrid}>
@@ -106,7 +128,7 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Communication Hub Section */}
+          {/* Communication Hub Section (Rendered only on Mobile via CSS) */}
           <CommunicationHubSection />
         </AnimatedMergedSection>
 
