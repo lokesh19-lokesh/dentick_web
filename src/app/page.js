@@ -294,42 +294,45 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className={styles.ctaSection}>
-          <div className={styles.ctaContainer}>
-            <h2>Ready to modernize your clinic?</h2>
-            <p>Join the fastest-growing dental network in India. 14-day free trial. No credit card required.</p>
-            <div className={styles.ctaButtonGroup}>
-              <Link href="/contact" className={styles.ctaBtnPrimary}>Get Your Free Growth Audit</Link>
-              <Link href="/pricing" className={styles.ctaBtnSecondary}>View Pricing</Link>
+        {/* Bottom Split Section */}
+        <div className={styles.bottomSplitSection}>
+          {/* CTA Section */}
+          <section className={styles.ctaSection}>
+            <div className={styles.ctaContainer}>
+              <h2>Ready to modernize your clinic?</h2>
+              <p>Join the fastest-growing dental network in India. 14-day free trial. No credit card required.</p>
+              <div className={styles.ctaButtonGroup}>
+                <Link href="/contact" className={styles.ctaBtnPrimary}>Get Your Free Growth Audit</Link>
+                <Link href="/pricing" className={styles.ctaBtnSecondary}>View Pricing</Link>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Consult Form Section */}
-        <section className={styles.consultSection}>
-          <div className={styles.consultBox}>
-            <h2 style={{ fontFamily: 'var(--font-serif)' }}>Free 30-min consult with a DentTick growth expert.</h2>
-            <form>
-              <div className={styles.formGroup}>
-                <input type="text" placeholder="Your name" required />
-              </div>
-              <div className={styles.formGroup}>
-                <input type="text" placeholder="Clinic name" required />
-              </div>
-              <div className={styles.formGroup}>
-                <input type="tel" placeholder="WhatsApp number" required />
-              </div>
-              <div className={styles.formGroup}>
-                <input type="text" placeholder="City" required />
-              </div>
-              <button type="submit" className={styles.submitBtn}>
-                Request my free consult
-              </button>
-              <p className={styles.formFooter}>No spam. We respect your time.</p>
-            </form>
-          </div>
-        </section>
+          {/* Consult Form Section */}
+          <section className={styles.consultSection}>
+            <div className={styles.consultBox}>
+              <h2 style={{ fontFamily: 'var(--font-serif)' }}>Free 30-min consult with a DentTick growth expert.</h2>
+              <form>
+                <div className={styles.formGroup}>
+                  <input type="text" placeholder="Your name" required />
+                </div>
+                <div className={styles.formGroup}>
+                  <input type="text" placeholder="Clinic name" required />
+                </div>
+                <div className={styles.formGroup}>
+                  <input type="tel" placeholder="WhatsApp number" required />
+                </div>
+                <div className={styles.formGroup}>
+                  <input type="text" placeholder="City" required />
+                </div>
+                <button type="submit" className={styles.submitBtn}>
+                  Request my free consult
+                </button>
+                <p className={styles.formFooter}>No spam. We respect your time.</p>
+              </form>
+            </div>
+          </section>
+        </div>
       </main>
     </div>
   );

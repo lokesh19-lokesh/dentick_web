@@ -545,6 +545,7 @@
   background-color: var(--secondary);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .ctaContainer {
@@ -999,12 +1000,33 @@
 }
 
 /* --- Consult Form Section --- */
+.bottomSplitSection {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .bottomSplitSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--border-color);
+  }
+}
+
 .consultSection {
   padding: 5rem 5%;
   background-color: var(--background);
   display: flex;
   justify-content: center;
   border-top: 1px solid var(--border-color);
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .consultSection {
+    border-top: none;
+    border-left: 1px solid var(--border-color);
+  }
 }
 
 .consultBox {
@@ -1098,6 +1120,11 @@
 
   .ctaContainer {
     padding: 3rem 1.5rem;
+  }
+  
+  .bottomSplitSection {
+    display: flex;
+    flex-direction: column;
   }
 
   .sectionHeader h2 {
