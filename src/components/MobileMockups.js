@@ -113,29 +113,71 @@ export default function MobileMockups() {
         <div className={styles.uiHeader}>
           <div className={styles.uiTitle}>AI Receptionist</div>
         </div>
-        <div className={styles.uiBody}>
-          <div className={styles.aiBubble}>Hello! I'm DentTick AI. How can I help you today?</div>
-          <div className={styles.userBubble}>Can I reschedule my appointment?</div>
-          <div className={styles.aiBubble}>I can help with that. What day works better for you?</div>
+        <div className={styles.crmGraphBody}>
+          <div className={styles.crmStatCards}>
+            <div className={styles.crmStatCard}>
+              <div className={styles.crmStatValue}>342</div>
+              <div className={styles.crmStatLabel}>Calls Handled</div>
+            </div>
+            <div className={styles.crmStatCard}>
+              <div className={styles.crmStatValue}>42h</div>
+              <div className={styles.crmStatLabel}>Time Saved</div>
+            </div>
+          </div>
+          <div className={styles.uiCard} style={{marginTop: '0.25rem', padding: '1rem'}}>
+             <div className={styles.uiCardTitle} style={{marginBottom: '1.25rem'}}>Call Volume (This Week)</div>
+             <div className={styles.uiLineChart}>
+                <svg viewBox="0 0 100 40" preserveAspectRatio="none" style={{width: '100%', height: '50px', overflow: 'visible'}}>
+                  <polyline fill="none" stroke="var(--primary)" strokeWidth="3" points="0,30 20,20 40,35 60,10 80,15 100,5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path fill="rgba(111, 60, 193, 0.1)" d="M0,30 L20,20 L40,35 L60,10 L80,15 L100,5 L100,40 L0,40 Z" />
+                </svg>
+             </div>
+             <div style={{display:'flex', justifyContent:'space-between', fontSize:'0.55rem', color:'#9ca3af', marginTop:'0.5rem'}}>
+               <span>Mon</span><span>Wed</span><span>Fri</span><span>Sun</span>
+             </div>
+          </div>
         </div>
       </div>
 
       <div className={`${styles.mobilePhone} ${styles.phone4} ${isVisible ? styles.visible : ''}`}>
         <div className={styles.uiHeaderDark}>
-          <div className={styles.uiTitle}>Schedule</div>
+          <div className={styles.uiTitle}>Schedule Overview</div>
         </div>
-        <div className={styles.uiBody}>
-          <div className={styles.calSlot}>
-            <div className={styles.calTime}>09:00</div>
-            <div className={styles.calAppt} style={{background: '#e0e7ff', borderLeft: '4px solid #4f46e5'}}>Root Canal - John</div>
+        <div className={styles.crmGraphBody}>
+          <div className={styles.crmStatCards}>
+            <div className={styles.crmStatCard}>
+              <div className={styles.crmStatValue} style={{color: '#34d399'}}>92%</div>
+              <div className={styles.crmStatLabel}>Capacity</div>
+            </div>
+            <div className={styles.crmStatCard}>
+              <div className={styles.crmStatValue} style={{color: '#f87171'}}>1%</div>
+              <div className={styles.crmStatLabel}>No-Shows</div>
+            </div>
           </div>
-          <div className={styles.calSlot}>
-            <div className={styles.calTime}>10:00</div>
-            <div className={styles.calAppt} style={{background: '#fce7f3', borderLeft: '4px solid #db2777'}}>Checkup - Emily</div>
-          </div>
-          <div className={styles.calSlot}>
-            <div className={styles.calTime}>11:00</div>
-            <div className={styles.calAppt} style={{background: '#fef3c7', borderLeft: '4px solid #d97706'}}>Consult - Mike</div>
+          
+          <div className={styles.uiCard} style={{marginTop: '0.25rem', padding: '1rem'}}>
+            <div className={styles.uiCardTitle}>Today's Utilization</div>
+            <div style={{marginTop: '1rem', marginBottom: '1.25rem'}}>
+              <div style={{display: 'flex', height: '10px', borderRadius: '5px', overflow: 'hidden', background: '#f3f4f6'}}>
+                <div style={{width: '40%', background: '#4f46e5'}}></div>
+                <div style={{width: '35%', background: '#db2777'}}></div>
+                <div style={{width: '15%', background: '#d97706'}}></div>
+              </div>
+            </div>
+            <div className={styles.crmLegend} style={{marginTop: '0', flexDirection: 'column', gap: '0.6rem'}}>
+              <div className={styles.crmLegendItem}>
+                <div className={styles.crmDot} style={{background: '#4f46e5'}}></div>
+                Treatments (40%)
+              </div>
+              <div className={styles.crmLegendItem}>
+                <div className={styles.crmDot} style={{background: '#db2777'}}></div>
+                Checkups (35%)
+              </div>
+              <div className={styles.crmLegendItem}>
+                <div className={styles.crmDot} style={{background: '#d97706'}}></div>
+                Consults (15%)
+              </div>
+            </div>
           </div>
         </div>
       </div>
