@@ -759,11 +759,13 @@
   gap: 3rem;
 }
 
-.sectionHeaderLeft {
-  text-align: left;
+.sectionHeaderCenter {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
 }
 
-.sectionHeaderLeft h2 {
+.sectionHeaderCenter h2 {
   font-family: var(--font-serif);
   font-size: 3.5rem;
   margin-bottom: 1rem;
@@ -771,7 +773,7 @@
   color: var(--foreground);
 }
 
-.sectionHeaderLeft p {
+.sectionHeaderCenter p {
   color: var(--text-muted);
   font-size: 1.1rem;
 }

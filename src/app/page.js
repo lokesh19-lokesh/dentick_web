@@ -160,14 +160,14 @@ export default function Home() {
 
         {/* How It Works Section */}
         <section className={styles.howItWorks}>
+          <div className={styles.sectionHeaderCenter}>
+            <h2>How it works</h2>
+            <p>Go live in 7 days. Grow forever.</p>
+          </div>
+
           <div className={styles.howItWorksContainer}>
             {/* Left Side: Text and Steps */}
             <div className={styles.howItWorksLeft}>
-              <div className={styles.sectionHeaderLeft}>
-                <h2>How it works</h2>
-                <p>Go live in 7 days. Grow forever.</p>
-              </div>
-              
               <div className={styles.stepsList}>
                 <div className={styles.stepItem}>
                   <div className={styles.stepNumber}>1</div>
