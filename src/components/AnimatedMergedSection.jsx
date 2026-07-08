@@ -34,16 +34,14 @@ export default function AnimatedMergedSection({
       let newScale = 1;
       let newRadius = 0;
 
-      if (rect.top > OFFSET && rect.top <= windowHeight) {
-        const progress = 1 - ((rect.top - OFFSET) / (windowHeight - OFFSET));
+      if (rect.top > OFFSET) {
+        let progress = 1 - ((rect.top - OFFSET) / (windowHeight - OFFSET));
+        progress = Math.max(0, Math.min(1, progress));
         newScale = 0.75 + (0.25 * progress);
         newRadius = 80 - (80 * progress);
-      } else if (rect.top <= OFFSET && rect.bottom > 0) {
+      } else {
         newScale = 1;
         newRadius = 0;
-      } else {
-        newScale = 0.75;
-        newRadius = 80;
       }
 
       newScale = Math.max(0.75, Math.min(1, newScale));
