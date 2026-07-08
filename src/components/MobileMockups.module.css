@@ -158,6 +158,31 @@
   color: #6b7280;
 }
 
+/* Mini Bar Chart */
+.uiBarChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.4rem;
+  height: 50px;
+  margin-top: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.uiBarCol {
+  flex: 1;
+  background: var(--primary);
+  border-radius: 4px 4px 0 0;
+  opacity: 0.8;
+  min-width: 10px;
+}
+
+.uiBarCol:nth-child(1) { height: 40%; opacity: 0.5; }
+.uiBarCol:nth-child(2) { height: 60%; opacity: 0.6; }
+.uiBarCol:nth-child(3) { height: 30%; opacity: 0.4; }
+.uiBarCol:nth-child(4) { height: 80%; opacity: 0.8; }
+.uiBarCol:nth-child(5) { height: 100%; opacity: 1; }
+
 /* AI UI */
 .aiBubble {
   background: #f3e8ff;

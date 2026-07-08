@@ -82,16 +82,29 @@ export default function MobileMockups() {
         <div className={styles.uiProfile}>
           <div className={styles.uiAvatar}></div>
           <div className={styles.uiName}>Sarah Johnson</div>
-          <div className={styles.uiDetail}>LTV: $4,250</div>
+          <div className={styles.uiDetail}>Lifetime Value: $4,250</div>
         </div>
         <div className={styles.uiBody}>
           <div className={styles.uiCard}>
-            <div className={styles.uiCardTitle}>Treatment Plan</div>
-            <div className={styles.uiBar}><div className={styles.uiBarFill} style={{width: '70%'}}></div></div>
+            <div className={styles.uiCardTitle}>Spend History</div>
+            <div className={styles.uiBarChart}>
+               <div className={styles.uiBarCol}></div>
+               <div className={styles.uiBarCol}></div>
+               <div className={styles.uiBarCol}></div>
+               <div className={styles.uiBarCol}></div>
+               <div className={styles.uiBarCol}></div>
+            </div>
+            <div style={{display:'flex', justifyContent:'space-between', fontSize:'0.55rem', color:'#9ca3af', marginTop:'0.25rem'}}>
+               <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span>
+            </div>
           </div>
+          
           <div className={styles.uiCard}>
-            <div className={styles.uiCardTitle}>Next Appointment</div>
-            <div className={styles.uiText}>Oct 24, 10:00 AM</div>
+            <div className={styles.uiCardTitle} style={{display:'flex', justifyContent:'space-between'}}>
+              <span>Treatment Plan</span>
+              <span style={{color:'var(--primary)'}}>70%</span>
+            </div>
+            <div className={styles.uiBar}><div className={styles.uiBarFill} style={{width: '70%'}}></div></div>
           </div>
         </div>
       </div>
