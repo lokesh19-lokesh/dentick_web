@@ -4,8 +4,8 @@ import styles from './AnimatedMergedSection.module.css';
 
 export default function AnimatedMergedSection({ children }) {
   const containerRef = useRef(null);
-  const [scaleFactor, setScaleFactor] = useState(0.90);
-  const [borderRadius, setBorderRadius] = useState(40);
+  const [scaleFactor, setScaleFactor] = useState(0.75);
+  const [borderRadius, setBorderRadius] = useState(80);
   const [bgTop, setBgTop] = useState(0);
 
   useEffect(() => {
@@ -39,8 +39,8 @@ export default function AnimatedMergedSection({ children }) {
       // Entering from bottom (top of section is in viewport)
       if (rect.top > OFFSET && rect.top <= windowHeight) {
         const progress = 1 - ((rect.top - OFFSET) / (windowHeight - OFFSET));
-        newScale = 0.90 + (0.10 * progress);
-        newRadius = 40 - (40 * progress);
+        newScale = 0.75 + (0.25 * progress);
+        newRadius = 80 - (80 * progress);
       }
       // Section is fully in the middle or leaving from top
       else if (rect.top <= OFFSET && rect.bottom > 0) {
@@ -49,12 +49,12 @@ export default function AnimatedMergedSection({ children }) {
       }
       // Completely outside (above or below)
       else {
-        newScale = 0.90;
-        newRadius = 40;
+        newScale = 0.75;
+        newRadius = 80;
       }
 
-      newScale = Math.max(0.90, Math.min(1, newScale));
-      newRadius = Math.max(0, Math.min(40, newRadius));
+      newScale = Math.max(0.75, Math.min(1, newScale));
+      newRadius = Math.max(0, Math.min(80, newRadius));
 
       setScaleFactor(newScale);
       setBorderRadius(newRadius);
