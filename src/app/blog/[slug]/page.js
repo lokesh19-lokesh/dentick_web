@@ -2,6 +2,14 @@ import styles from './page.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 
+export async function generateStaticParams() {
+  return [
+    { slug: 'ai-dental-practice-management' },
+    { slug: 'boost-case-acceptance-rates' },
+    { slug: 'whatsapp-marketing-dentists' },
+  ];
+}
+
 export default async function BlogPost({ params }) {
   const { slug } = await params;
   
