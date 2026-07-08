@@ -1,5 +1,3 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import Button from '../components/Button';
 import Link from 'next/link';
 import { featuresData } from '../data/features';
@@ -26,7 +24,6 @@ const SmallIcon = ({ children }) => (
 export default function Home() {
   return (
     <div className={styles.main}>
-      <Header />
       
       <main>
         {/* Hero Section */}
@@ -334,8 +331,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }

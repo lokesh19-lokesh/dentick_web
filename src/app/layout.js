@@ -1,5 +1,7 @@
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -128,7 +130,9 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

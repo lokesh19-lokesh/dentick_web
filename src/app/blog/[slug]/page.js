@@ -2,8 +2,8 @@ import styles from './page.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function BlogPost({ params }) {
-  const { slug } = params;
+export default async function BlogPost({ params }) {
+  const { slug } = await params;
   
   const title = slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
