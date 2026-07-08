@@ -1,8 +1,14 @@
 .blogSection {
-  padding: 6rem 5%;
+  padding: 3rem 5%;
   background-color: var(--background);
   position: relative;
   z-index: 10;
+}
+
+@media (min-width: 992px) {
+  .blogSection {
+    padding: 6rem 5%;
+  }
 }
 
 .container {
@@ -13,14 +19,26 @@
 .header {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 2rem auto;
+}
+
+@media (min-width: 992px) {
+  .header {
+    margin: 0 auto 4rem auto;
+  }
 }
 
 .header h2 {
   font-family: var(--font-serif);
-  font-size: 3rem;
+  font-size: 2.25rem;
   color: var(--foreground);
   margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  .header h2 {
+    font-size: 3rem;
+  }
 }
 
 .header p {
