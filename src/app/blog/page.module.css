@@ -1,0 +1,23 @@
+.main {
+  min-height: 100vh;
+  padding-top: 80px;
+  background-color: var(--background);
+}
+
+.pageHeader {
+  text-align: center;
+  padding: 5rem 1rem 1rem;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.pageHeader h1 {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.pageHeader p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}

@@ -12,6 +12,7 @@ import CommunicationHubSection, { CommunicationHubGraphic, CommunicationHubText 
 import AnimatedMergedSection from '../components/AnimatedMergedSection';
 import CtaBanner from '../components/CtaBanner';
 import CaseStudiesSection from '../components/CaseStudiesSection';
+import BlogSection from '../components/BlogSection';
 
 // Small icons for the titles (solid white, simple paths)
 const SmallIcon = ({ children }) => (
@@ -202,6 +203,9 @@ export default function Home() {
 
         {/* Case Studies Section */}
         <CaseStudiesSection />
+
+        {/* Blog Section */}
+        <BlogSection />
 
         {/* Testimonials Section */}
         <section className={styles.testimonialsSection}>
