@@ -1,5 +1,3 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import Link from 'next/link';
 import styles from './page.module.css';
 
@@ -24,7 +22,6 @@ export default function Careers() {
 
   return (
     <div className={styles.pageWrapper}>
-      <Header />
       
       <main>
         <section className={styles.hero}>
@@ -67,7 +64,6 @@ export default function Careers() {
         </section>
       </main>
       
-      <Footer />
     </div>
   );
 }

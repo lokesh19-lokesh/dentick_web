@@ -1,5 +1,3 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -78,7 +76,6 @@ export default function Contact() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Header />
       <main>
         <div className={styles.hero}>
           <div className={styles.overline}>Contact</div>
@@ -159,7 +156,6 @@ export default function Contact() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

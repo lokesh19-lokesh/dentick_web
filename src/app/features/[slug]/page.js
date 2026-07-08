@@ -1,6 +1,4 @@
 import { notFound } from 'next/navigation';
-import Header from '../../../components/Header';
-import Footer from '../../../components/Footer';
 import Link from 'next/link';
 import { featuresData } from '../../../data/features';
 import styles from './page.module.css';
@@ -32,7 +30,6 @@ export default async function FeaturePage({ params }) {
 
   return (
     <div className={styles.main}>
-      <Header />
       
       <main>
         {/* Hero Section */}
@@ -86,7 +83,6 @@ export default async function FeaturePage({ params }) {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 }

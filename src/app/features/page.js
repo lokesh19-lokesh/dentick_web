@@ -1,5 +1,3 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import Link from 'next/link';
 import styles from './page.module.css';
 import { featuresData } from '../../data/features';
@@ -60,7 +58,6 @@ export default function Features() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Header />
       
       <main>
         {/* Hero Section */}
@@ -112,7 +109,6 @@ export default function Features() {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 }

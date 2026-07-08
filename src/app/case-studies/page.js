@@ -1,5 +1,3 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import CtaBanner from '../../components/CtaBanner';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -53,7 +51,6 @@ const caseStudies = [
 export default function CaseStudies() {
   return (
     <div className={styles.main}>
-      <Header />
       
       <main>
         <section className={styles.hero}>
@@ -93,7 +90,6 @@ export default function CaseStudies() {
         <CtaBanner />
       </main>
 
-      <Footer />
     </div>
   );
 }

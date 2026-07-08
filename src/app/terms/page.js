@@ -1,5 +1,3 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import Link from 'next/link';
 import styles from '../legal.module.css';
 
@@ -11,7 +9,6 @@ export const metadata = {
 export default function Terms() {
   return (
     <div className={styles.pageWrapper}>
-      <Header />
       
       <main>
         <div className={styles.header}>
@@ -53,7 +50,6 @@ export default function Terms() {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 }

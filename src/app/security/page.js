@@ -1,5 +1,3 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -57,7 +55,6 @@ export default function Security() {
 
   return (
     <div className={styles.pageWrapper}>
-      <Header />
       
       <main>
         <section className={styles.hero}>
@@ -95,7 +92,6 @@ export default function Security() {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 }

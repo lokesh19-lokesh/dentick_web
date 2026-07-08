@@ -1,5 +1,3 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import styles from './page.module.css';
 import FaqAccordion from './FaqAccordion';
 import Link from 'next/link';
@@ -53,7 +51,6 @@ export default function Pricing() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Header />
       <main>
         <div className={styles.hero}>
           <div className={styles.overline}>Pricing</div>
@@ -151,7 +148,6 @@ export default function Pricing() {
           <FaqAccordion />
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

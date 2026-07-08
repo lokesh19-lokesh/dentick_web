@@ -1,5 +1,3 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -45,7 +43,6 @@ export default function About() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Header />
       <main>
         <div className={styles.hero}>
           <div className={styles.overline}>About</div>
@@ -122,7 +119,6 @@ export default function About() {
           </Link>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
